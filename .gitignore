@@ -1,0 +1,33 @@
+### web-ui ###
+web-ui/.vscode
+web-ui/node_modules/
+web-ui/dist/
+web-ui/npm-debug.log*
+web-ui/yarn-debug.log*
+web-ui/yarn-error.log*
+web-ui/package-lock.json
+web-ui/tests/**/coverage/
+
+### webScoketServer ###
+webScoketServer/.idea/
+webScoketServer/.idea
+webScoketServer/target
+webScoketServer/*.log
+webScoketServer/*.tmp
+webScoketServer/*.gz
+webScoketServer/*.iml
+webScoketServer/.mvn
+webScoketServer/*.ipr
+webScoketServer/**/application-test.yml
+
+### nettyClient ###
+nettyClient/.idea/
+nettyClient/.idea
+nettyClient/target
+webScoketServer/.mvn
+nettyClient/*.log
+nettyClient/*.tmp
+nettyClient/*.gz
+nettyClient/*.iml
+nettyClient/*.ipr
+nettyClient/**/application-test.yml
