@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'mink-links-tools',
 
   /**
    * @type {boolean} true | false

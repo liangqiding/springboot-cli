@@ -1,3 +1,8 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
 ### web-ui ###
 web-ui/.vscode
 web-ui/node_modules/
@@ -24,7 +29,7 @@ webScoketServer/**/application-test.yml
 nettyClient/.idea/
 nettyClient/.idea
 nettyClient/target
-webScoketServer/.mvn
+nettyClient/.mvn
 nettyClient/*.log
 nettyClient/*.tmp
 nettyClient/*.gz
