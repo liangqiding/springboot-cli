@@ -13,26 +13,14 @@ web-ui/yarn-error.log*
 web-ui/package-lock.json
 web-ui/tests/**/coverage/
 
-### webScoketServer ###
-webScoketServer/.idea/
-webScoketServer/.idea
-webScoketServer/target
-webScoketServer/*.log
-webScoketServer/*.tmp
-webScoketServer/*.gz
-webScoketServer/*.iml
-webScoketServer/.mvn
-webScoketServer/*.ipr
-webScoketServer/**/application-test.yml
-
-### nettyClient ###
-nettyClient/.idea/
-nettyClient/.idea
-nettyClient/target
-nettyClient/.mvn
-nettyClient/*.log
-nettyClient/*.tmp
-nettyClient/*.gz
-nettyClient/*.iml
-nettyClient/*.ipr
-nettyClient/**/application-test.yml
+### springboot ###
+*/.idea/
+*/.idea
+*/target
+*/*.log
+*/*.tmp
+*/*.gz
+*/*.iml
+*/.mvn
+*/*.ipr
+*/**/application-test.yml
