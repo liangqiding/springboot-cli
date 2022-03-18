@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 
 /**
@@ -29,9 +30,8 @@ public class IoFileController {
     }
 
     @GetMapping(value = "/download", consumes = MediaType.ALL_VALUE)
-    public void downloadFile(final HttpServletResponse response, String fileName) throws Exception {
+    public void downloadFile(HttpServletResponse response, String fileName) throws IOException {
         FileUtils.getInputStream(response, path + "/" + fileName);
     }
-
 
 }

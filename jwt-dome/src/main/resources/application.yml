@@ -1,0 +1,15 @@
+#==========================swagger 访问接口==================================
+#           http://${ip}:10131/swagger-ui/index.html                      #
+#==========================================================================
+server:
+  port: 10100
+spring:
+  application:
+    name: jwt_demo
+  profiles:
+    active: test
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true

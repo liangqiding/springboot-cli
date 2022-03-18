@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatis_generation.dao.ParentListMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.mybatis_generation.domain.ParentList">
+        <id column="p_id" property="pId" />
+        <result column="parent_id" property="parentId" />
+        <result column="name" property="name" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        p_id, parent_id, name
+    </sql>
+
+    <resultMap id="baseResultMap" type="com.example.mybatis_generation.domain.vo.ParentListVo">
+        <id column="p_id" property="pId" />
+        <result column="name" property="name"/>
+        <result column="parent_id" property="parentId"/>
+        <collection property="children" ofType="com.example.mybatis_generation.domain.vo.ParentListVo" select="listParentTree" column="p_id">
+        </collection>
+    </resultMap>
+
+    <select id="listParentTree" resultMap="baseResultMap" parameterType="Integer">
+        select d1.* from parent_list d1 where d1.`parent_id`=#{parentId};
+    </select>
+
+
+</mapper>

@@ -4,11 +4,9 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 
 
 /**
@@ -18,6 +16,8 @@ import java.io.OutputStream;
 public class FileUtils {
 
     /**
+     * 保存文件
+     *
      * @param files 文件数组
      * @param path  保存路径
      */
@@ -26,10 +26,11 @@ public class FileUtils {
         ) {
             saveFile(file, path);
         }
-
     }
 
     /**
+     * 保存文件
+     *
      * @param file 文件
      * @param path 保存路径
      */
@@ -50,8 +51,11 @@ public class FileUtils {
     /**
      * 获取文件下载
      */
-    public static void getInputStream(final HttpServletResponse response, String path) {
+    public static void getInputStream(final HttpServletResponse response, String path) throws IOException {
         File file = new File(path);
+        if (!FileUtil.isFile(file)) {
+            throw new FileNotFoundException();
+        }
         String fileName = file.getName();
         // 清空缓冲区，状态码和响应头(headers)
         response.reset();

@@ -1,0 +1,14 @@
+#==========================swagger 访问接口==================================
+#           http://${ip}:10131/swagger-ui/index.html                      #
+#==========================================================================
+server:
+  port: 10100
+spring:
+  main:
+    # 允许循环嵌套查询
+    allow-circular-references: true
+  application:
+    name: AuthSercurity
+  profiles:
+    active: test
+
