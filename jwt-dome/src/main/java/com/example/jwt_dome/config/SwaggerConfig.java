@@ -13,7 +13,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 /**
  * @author ：liangQiDing
- *
  * @date ：Created in 2020/10/20 16:53
  * description：  swagger api 文档配置
  */
@@ -34,7 +33,9 @@ public class SwaggerConfig {
                 .build();
     }
 
-    //生成接口信息，包括标题、联系人，联系方式等
+    /**
+     * 生成接口信息，包括标题、联系人，联系方式等
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Swagger3接口文档")

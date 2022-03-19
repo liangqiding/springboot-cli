@@ -2,7 +2,7 @@
 #           http://${ip}:10131/swagger-ui/index.html                      #
 #==========================================================================
 server:
-  port: 10100
+  port: 20010
 spring:
   application:
     name: jwt_demo

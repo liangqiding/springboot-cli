@@ -2,12 +2,9 @@ package com.example.jwt_dome.jwt;
 
 
 import io.jsonwebtoken.*;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
-import javax.annotation.PostConstruct;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Date;
@@ -19,7 +16,6 @@ import java.util.Date;
  *
  * @author qiDing
  */
-@Component
 @Slf4j
 @ApiModel("token提供者")
 public class TokenProvider {
@@ -33,22 +29,17 @@ public class TokenProvider {
     @ApiModelProperty("权限密钥")
     private static final String AUTHORITIES_KEY = "auth";
 
-    @ApiModelProperty("Base64 加密")
-    private final Base64.Encoder encoder = Base64.getEncoder();
-
     @ApiModelProperty("Base64 密钥")
-    private String secretKey;
+    private final static String SECRET_KEY =  Base64.getEncoder().encodeToString(SALT_KEY.getBytes(StandardCharsets.UTF_8));
 
-
-    @PostConstruct
-    public void init() {
-        this.secretKey = encoder.encodeToString(SALT_KEY.getBytes(StandardCharsets.UTF_8));
-    }
 
     /**
      * 生成token
+     * @param userId 用户id
+     * @param clientId 用于区别客户端，如移动端，网页端，此处可根据自己业务自定义
+     * @param role 角色权限
      */
-    public String createToken(String userId, String clientId, String role) {
+    public static String createToken(String userId, String clientId, String role) {
         Date validity = new Date((new Date()).getTime() + TOKEN_VALIDITY);
         return Jwts.builder()
                 // 代表这个JWT的主体，即它的所有人
@@ -61,7 +52,7 @@ public class TokenProvider {
                 .setAudience(clientId)
                 .claim("role", role)
                 .claim("userId", userId)
-                .signWith(SignatureAlgorithm.HS512, secretKey)
+                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .setExpiration(validity)
                 .compact();
     }
@@ -69,9 +60,9 @@ public class TokenProvider {
     /**
      * 校验token
      */
-    public JwtUser getAuthentication(String token) {
-        if (this.validateToken(token)) {
-            Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token).getBody();
+    public static JwtUser checkToken(String token) {
+        if (validateToken(token)) {
+            Claims claims = Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
             String audience = claims.getAudience();
             String userId = claims.get("userId", String.class);
             String role = claims.get("role", String.class);
@@ -84,14 +75,13 @@ public class TokenProvider {
     }
 
 
-    private boolean validateToken(String authToken) {
+    private static boolean validateToken(String authToken) {
         try {
-            Jwts.parser().setSigningKey(secretKey).parseClaimsJws(authToken);
+            Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(authToken);
             return true;
         } catch (Exception e) {
             log.error("无效的token：" + authToken);
         }
         return false;
     }
-
 }

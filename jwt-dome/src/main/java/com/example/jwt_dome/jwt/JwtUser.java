@@ -17,4 +17,6 @@ public class JwtUser {
     public JwtUser() {
         this.valid = false;
     }
+
+
 }
