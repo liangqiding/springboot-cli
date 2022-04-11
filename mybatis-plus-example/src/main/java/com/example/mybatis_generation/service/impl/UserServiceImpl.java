@@ -7,6 +7,8 @@ import com.example.mybatis_generation.domain.User;
 import com.example.mybatis_generation.dao.UserMapper;
 import com.example.mybatis_generation.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -61,7 +63,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 // 当用户名不为空，该条件生效，执行模糊查询
                 .like(StrUtil.isNotBlank(user.getUsername()), "username", user.getUsername())
                 // 当用户账号不为空，该条件生效
-                .eq(StrUtil.isNotBlank(user.getAccount()), "account", user.getAccount());
+                .eq(StrUtil.isNotBlank(user.getAccount()), "account", user.getAccount())
+                // 根据created_date倒序排序
+                .orderBy(true, false, "created_date");
         return this.list(eq);
+    }
+
+    @Override
+    public PageInfo<User> listUserPage(User user, Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<User> users = this.listUser(user);
+        return new PageInfo<>(users);
     }
 }

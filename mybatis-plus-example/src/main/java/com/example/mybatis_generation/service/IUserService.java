@@ -2,6 +2,7 @@ package com.example.mybatis_generation.service;
 
 import com.example.mybatis_generation.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -55,4 +56,14 @@ public interface IUserService extends IService<User> {
      * @return b
      */
     List<User> listUser(User user);
+
+    /**
+     * 分页查询用户
+     *
+     * @param user     查询用户的条件
+     * @param pageNum  页码
+     * @param pageSize 页大小
+     * @return b
+     */
+    PageInfo<User> listUserPage(User user, Integer pageNum, Integer pageSize);
 }
