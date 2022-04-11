@@ -7,12 +7,14 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import lombok.extern.slf4j.Slf4j;
 import netty.web.scoket.server.utils.SpringBeanFactory;
 import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 /**
  * * 协议初始化解码器. *
  * * 用来判定实际使用什么协议.</b> *
  * 多协议切换工具
+ *
  * @author : qiDing
  * date: 2021-01-02 10:06
  * @version v1.0.0

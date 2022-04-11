@@ -31,7 +31,7 @@ public class MessageHandler extends SimpleChannelInboundHandler<Object> {
         Channel channel = channelHandlerContext.channel();
         if (msg instanceof FullHttpRequest) {
             log.info("\n");
-            log.info("############### WebSocket-FullHttpRequest 连接总数：{} #####################",COUNT_CONNECT);
+            log.info("############### WebSocket-FullHttpRequest 连接总数：{} #####################", COUNT_CONNECT);
             webSocketServerHandler.handleHttpRequest(channel, (FullHttpRequest) msg);
         } else if (msg instanceof WebSocketFrame) {
             log.info("\n");
@@ -47,7 +47,7 @@ public class MessageHandler extends SimpleChannelInboundHandler<Object> {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
         COUNT_CONNECT++;
-        log.info("客户端连接通知：{},当前总连接数{}", ctx.channel(),COUNT_CONNECT);
+        log.info("客户端连接通知：{},当前总连接数{}", ctx.channel(), COUNT_CONNECT);
     }
 
     @Override

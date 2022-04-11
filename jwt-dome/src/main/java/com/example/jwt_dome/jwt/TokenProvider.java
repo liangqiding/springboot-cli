@@ -5,6 +5,7 @@ import io.jsonwebtoken.*;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Date;
@@ -30,14 +31,15 @@ public class TokenProvider {
     private static final String AUTHORITIES_KEY = "auth";
 
     @ApiModelProperty("Base64 密钥")
-    private final static String SECRET_KEY =  Base64.getEncoder().encodeToString(SALT_KEY.getBytes(StandardCharsets.UTF_8));
+    private final static String SECRET_KEY = Base64.getEncoder().encodeToString(SALT_KEY.getBytes(StandardCharsets.UTF_8));
 
 
     /**
      * 生成token
-     * @param userId 用户id
+     *
+     * @param userId   用户id
      * @param clientId 用于区别客户端，如移动端，网页端，此处可根据自己业务自定义
-     * @param role 角色权限
+     * @param role     角色权限
      */
     public static String createToken(String userId, String clientId, String role) {
         Date validity = new Date((new Date()).getTime() + TOKEN_VALIDITY);

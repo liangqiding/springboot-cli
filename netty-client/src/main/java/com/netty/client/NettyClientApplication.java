@@ -13,15 +13,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class NettyClientApplication implements ApplicationRunner {
 
-	@Autowired
-	private NettyClientBootStrap nettyClientBootStrap;
+    @Autowired
+    private NettyClientBootStrap nettyClientBootStrap;
 
-	public static void main(String[] args) {
-		SpringApplication.run(NettyClientApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(NettyClientApplication.class, args);
+    }
 
-	@Override
-	public void run(ApplicationArguments args) throws Exception {
-		nettyClientBootStrap.start(new NioEventLoopGroup());
-	}
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        nettyClientBootStrap.start(new NioEventLoopGroup());
+    }
 }

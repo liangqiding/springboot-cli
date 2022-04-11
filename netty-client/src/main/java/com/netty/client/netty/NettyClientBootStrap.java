@@ -15,6 +15,7 @@ import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+
 import javax.annotation.PreDestroy;
 
 /**
@@ -27,7 +28,7 @@ import javax.annotation.PreDestroy;
 @Slf4j
 public class NettyClientBootStrap {
 
-//    private static final String HOST = "support.agilex.ai";
+    //    private static final String HOST = "support.agilex.ai";
     private static final String HOST = "localhost";
     private static final int PORT = 6060;
     private static SocketChannel socketChannel = null;

@@ -15,25 +15,32 @@
 */
 
 SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
+SET
+FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for parent_list
 -- ----------------------------
 DROP TABLE IF EXISTS `parent_list`;
-CREATE TABLE `parent_list`  (
-  `p_id` int NOT NULL AUTO_INCREMENT,
-  `parent_id` int NULL DEFAULT NULL COMMENT '父id',
-  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '名称',
-  PRIMARY KEY (`p_id`) USING BTREE
+CREATE TABLE `parent_list`
+(
+    `p_id`      int NOT NULL AUTO_INCREMENT,
+    `parent_id` int NULL DEFAULT NULL COMMENT '父id',
+    `name`      varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '名称',
+    PRIMARY KEY (`p_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of parent_list
 -- ----------------------------
-INSERT INTO `parent_list` VALUES (1, 0, 'aa');
-INSERT INTO `parent_list` VALUES (2, 1, 'bb');
-INSERT INTO `parent_list` VALUES (3, 1, 'cc');
-INSERT INTO `parent_list` VALUES (4, 2, 'dd');
+INSERT INTO `parent_list`
+VALUES (1, 0, 'aa');
+INSERT INTO `parent_list`
+VALUES (2, 1, 'bb');
+INSERT INTO `parent_list`
+VALUES (3, 1, 'cc');
+INSERT INTO `parent_list`
+VALUES (4, 2, 'dd');
 
-SET FOREIGN_KEY_CHECKS = 1;
+SET
+FOREIGN_KEY_CHECKS = 1;

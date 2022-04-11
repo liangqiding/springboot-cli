@@ -7,15 +7,15 @@ import org.springframework.stereotype.Controller;
 
 /**
  * <p>
- * 前端控制器
+ *  前端控制器
  * </p>
  *
  * @author qiDing
- * @since 2022-03-18
+ * @since 2022-04-11
  */
 @Controller
-@RequestMapping("/jsonData")
-public class JsonDataController {
+@RequestMapping("/user")
+public class UserController {
 
 }
 

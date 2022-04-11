@@ -9,12 +9,12 @@ import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
 /**
- *
  * 配置参考 ： https://baomidou.com/guide/generator.html
  *
  * @author: qiDing
@@ -26,7 +26,7 @@ public class GlobalConfigs {
     /**
      * 数据库地址
      */
-    private static final String DB_URL="jdbc:mysql://192.168.41.128:3306/mind_links_core?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true";
+    private static final String DB_URL = "jdbc:mysql://192.168.41.128:3306/mind_links_core?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true";
     /**
      * db 账号
      */
@@ -55,7 +55,7 @@ public class GlobalConfigs {
         String path = System.getProperty("user.dir");
         config.setActiveRecord(true)
                 .setAuthor("qiDing")
-                .setOutputDir(path+"\\src\\main\\java\\")
+                .setOutputDir(path + "\\src\\main\\java\\")
                 .setBaseResultMap(true)
                 .setBaseColumnList(true)
                 .setFileOverride(fileOverride);

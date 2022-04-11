@@ -15,7 +15,6 @@ import java.util.List;
  * @author qiDing
  * @since 2021-12-14
  */
-@Mapper
 public interface ParentListMapper extends BaseMapper<ParentList> {
 
     List<ParentListVo> listParentTree(Integer parent);

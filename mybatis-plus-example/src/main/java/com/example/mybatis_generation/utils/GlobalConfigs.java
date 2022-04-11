@@ -15,7 +15,6 @@ import java.util.List;
 
 
 /**
- *
  * 配置参考 ： https://baomidou.com/guide/generator.html
  *
  * @author: qiDing
@@ -27,7 +26,7 @@ public class GlobalConfigs {
     /**
      * 数据库地址
      */
-    private static final String DB_URL="jdbc:mysql://192.168.41.128:3306/mind_links_core?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true";
+    private static final String DB_URL = "jdbc:mysql://192.168.41.128:3306/example?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true";
     /**
      * db 账号
      */
@@ -47,7 +46,7 @@ public class GlobalConfigs {
     /**
      * 需要生成的数据库表名，数组，可多个
      */
-    private static final String[] TABLE_NAME = {"parent_list"};
+    private static final String[] TABLE_NAME = {"user"};
 
     public static void main(String[] args) {
 
@@ -56,7 +55,7 @@ public class GlobalConfigs {
         String path = System.getProperty("user.dir");
         config.setActiveRecord(true)
                 .setAuthor("qiDing")
-                .setOutputDir(path+"\\src\\main\\java\\")
+                .setOutputDir(path + "\\src\\main\\java\\")
                 .setBaseResultMap(true)
                 .setBaseColumnList(true)
                 .setFileOverride(fileOverride);

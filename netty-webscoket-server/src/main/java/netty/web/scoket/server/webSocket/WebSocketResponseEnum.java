@@ -8,6 +8,7 @@ import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import netty.web.scoket.server.config.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.util.Arrays;
 
 
@@ -63,12 +64,12 @@ public enum WebSocketResponseEnum {
     RESP_ALL_ONLINE(102, "获取所有在线设备") {
         @Override
         public void sendResponseMessageEnum(Channel wsChannel, JSONObject data, boolean status) {
-           }
+        }
     },
     RESP_RESPONSE(200, "小车响应") {
         @Override
         public void sendResponseMessageEnum(Channel wsChannel, JSONObject data, boolean status) {
-         }
+        }
     };
 
     private static final Logger log = LoggerFactory.getLogger(WebSocketResponseEnum.class);
@@ -147,10 +148,10 @@ public enum WebSocketResponseEnum {
      * 主动通知服务所有在线的物主
      */
     public static void notifies(Long deviceId, Integer reqType, JSONObject response) {
-        notifies(deviceId, reqType, response,true);
+        notifies(deviceId, reqType, response, true);
     }
 
-    public static void notifies(Long deviceId, Integer reqType, JSONObject response,boolean status) {
+    public static void notifies(Long deviceId, Integer reqType, JSONObject response, boolean status) {
 
     }
 

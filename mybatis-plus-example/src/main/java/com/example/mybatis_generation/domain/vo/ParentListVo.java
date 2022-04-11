@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author qiDing
@@ -24,7 +24,7 @@ import java.util.List;
 @Accessors(chain = true)
 public class ParentListVo extends Model<ParentList> {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
 
     @TableId(value = "p_id", type = IdType.AUTO)

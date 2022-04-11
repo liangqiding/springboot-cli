@@ -4,6 +4,7 @@ package com.example.mybatis_generation.controller;
 import com.example.mybatis_generation.dao.ParentListMapper;
 import com.example.mybatis_generation.domain.vo.ParentListVo;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,16 +23,20 @@ import java.util.List;
  * @since 2021-12-14
  */
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ParentListController {
 
     private final ParentListMapper parentListMapper;
 
-    @GetMapping("/get")
+    /**
+     * 递归树形查询,如地区
+     */
+    @GetMapping("/list/tree")
     public Object test(Integer id) {
         List<ParentListVo> parentListVos = parentListMapper.listParentTree(id);
         System.out.println(parentListVos);
         return parentListVos;
     }
+
 }
 

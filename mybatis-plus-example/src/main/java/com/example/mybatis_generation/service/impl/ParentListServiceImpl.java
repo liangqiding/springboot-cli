@@ -2,15 +2,17 @@ package com.example.mybatis_generation.service.impl;
 
 import com.example.mybatis_generation.domain.ParentList;
 import com.example.mybatis_generation.dao.ParentListMapper;
+import com.example.mybatis_generation.domain.User;
 import com.example.mybatis_generation.service.IParentListService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author qiDing
@@ -18,6 +20,5 @@ import java.util.HashMap;
  */
 @Service
 public class ParentListServiceImpl extends ServiceImpl<ParentListMapper, ParentList> implements IParentListService {
-
 
 }

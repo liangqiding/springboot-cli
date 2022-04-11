@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.HashMap;
 
 /**
@@ -47,6 +48,6 @@ public class TokenController {
     public String getInfo() {
         // 从全局环境中获取用户id
         JwtUser user = AuthStorage.getUser();
-        return "用户："+user.getUserId() + "，请求成功";
+        return "用户：" + user.getUserId() + "，请求成功";
     }
 }

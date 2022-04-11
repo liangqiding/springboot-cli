@@ -96,7 +96,7 @@ public class TestC {
         JSONObject data = JSON.parseObject(json);
         JSONObject resp = new JSONObject();
         resp.put("reqType", 4);
-        resp.put("data",data);
+        resp.put("data", data);
         Optional.ofNullable(WebSocketServerHandler.channels).ifPresentOrElse(channel ->
                         channel.writeAndFlush(new TextWebSocketFrame(resp.toJSONString())),
                 () -> log.error("没有在线的socket客户端"));

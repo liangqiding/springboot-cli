@@ -1,9 +1,9 @@
 package netty.web.scoket.server.config;
 
 
-
 import lombok.Data;
 import lombok.experimental.Accessors;
+
 import java.io.Serializable;
 
 /**
@@ -19,7 +19,7 @@ public class ResponseResult<T> implements Serializable {
 
     private boolean status = true;
 
-    private String desc ="操作成功";
+    private String desc = "操作成功";
 
     private T data;
 

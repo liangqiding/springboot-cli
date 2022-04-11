@@ -4,8 +4,8 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.example.mybatis_generation.domain.JsonData">
-        <id column="id" property="id" />
-        <result column="json_data" property="jsonData" />
+        <id column="id" property="id"/>
+        <result column="json_data" property="jsonData"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->

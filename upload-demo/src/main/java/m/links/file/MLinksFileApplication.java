@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MLinksFileApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MLinksFileApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MLinksFileApplication.class, args);
+    }
 
 }
