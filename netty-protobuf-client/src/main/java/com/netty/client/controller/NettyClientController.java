@@ -58,7 +58,7 @@ public class NettyClientController {
      */
     @RequestMapping("/rec")
     public String reconnection() throws InterruptedException {
-        NettyClientBootStrap.start(new NioEventLoopGroup());
+        nettyClientBootStrap.start(new NioEventLoopGroup());
         return "success";
     }
 

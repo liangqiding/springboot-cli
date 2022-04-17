@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tcp-server
+
+# tcp
+tcp:
+  server:
+    host: 127.0.0.1
+    port: 20000
+    # 传输模式linux上开启会有更高的性能
+    use-epoll: false
+
+# 日记配置
+logging:
+  level:
+    # 开启debug日记打印
+    com.netty: debug

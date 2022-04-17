@@ -28,13 +28,12 @@ import javax.annotation.PreDestroy;
 @Slf4j
 public class NettyClientBootStrap {
 
-    //    private static final String HOST = "support.agilex.ai";
     private static final String HOST = "localhost";
     private static final int PORT = 6060;
     private static SocketChannel socketChannel = null;
     private static EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
 
-    public static void start(EventLoopGroup loopGroup) throws InterruptedException {
+    public void start(EventLoopGroup loopGroup) throws InterruptedException {
         eventLoopGroup = loopGroup;
         Bootstrap bootstrap = new Bootstrap();
         bootstrap.channel(NioSocketChannel.class);

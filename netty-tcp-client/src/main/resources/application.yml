@@ -1,0 +1,21 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: tcp-client
+
+# tcp
+tcp:
+  client:
+    host: 127.0.0.1
+    port: 19999
+  # 要连接的服务器ip和端口
+  server:
+    host: 127.0.0.1
+    port: 20000
+
+# 日记配置
+logging:
+  level:
+    com.netty: debug
