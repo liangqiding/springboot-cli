@@ -22,21 +22,30 @@ public class HttpApi {
     private final TcpClient tcpClient;
 
     /**
-     * 登录
+     * 消息发布
      */
-    @PostMapping("/login")
-    public String login(@RequestBody JSONObject connect) {
-        tcpClient.getSocketChannel().writeAndFlush(connect);
+    @GetMapping("/send")
+    public String send(String message) {
+        tcpClient.getSocketChannel().writeAndFlush(message);
         return "发送成功";
     }
 
     /**
      * 消息发布
      */
-    @PostMapping("/send")
+    @PostMapping("/send/json")
     public String send(@RequestBody JSONObject body) {
         tcpClient.getSocketChannel().writeAndFlush(body.toJSONString());
         return "发送成功";
+    }
+
+    /**
+     * 连接
+     */
+    @GetMapping("connect")
+    public String connect(String ip, Integer port) throws Exception {
+        tcpClient.connect(ip, port);
+        return "重启指令发送成功";
     }
 
     /**
@@ -47,5 +56,4 @@ public class HttpApi {
         tcpClient.reconnect();
         return "重启指令发送成功";
     }
-
 }

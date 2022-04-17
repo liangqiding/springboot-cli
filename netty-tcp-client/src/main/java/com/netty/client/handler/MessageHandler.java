@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * MQTT消息处理,单例启动
+ * 消息处理,单例启动
  *
  * @author qiding
  */
@@ -46,7 +46,8 @@ public class MessageHandler extends SimpleChannelInboundHandler<MqttMessage> {
         log.info("心跳事件时触发");
         if (evt instanceof IdleStateEvent) {
             log.info("发送心跳");
-            IdleStateEvent idleStateEvent = (IdleStateEvent) evt;
+            // 此处编写发送心跳代码
+            // ctx.writeAndFlush("ping");
         } else {
             super.userEventTriggered(ctx, evt);
         }

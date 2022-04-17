@@ -13,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.PreDestroy;
 
 /**
@@ -42,10 +41,10 @@ public class TcpClient implements ITcpClient {
     private Integer clientPort;
 
     @Value("${tcp.server.host}")
-    private String brokerHost;
+    private String serverHost;
 
     @Value("${tcp.server.port}")
-    private Integer brokerPort;
+    private Integer serverPort;
 
     @Override
     public void start() throws Exception {
@@ -55,8 +54,17 @@ public class TcpClient implements ITcpClient {
 
     @Override
     public void reconnect() throws Exception {
-        socketChannel.close();
-        this.connect();
+        if (socketChannel != null && socketChannel.isActive()) {
+            socketChannel.close();
+            this.connect(serverHost, serverPort);
+        }
+
+    }
+
+    public void disconnect() {
+        if (socketChannel != null && socketChannel.isActive()) {
+            socketChannel.close();
+        }
     }
 
     /**
@@ -70,7 +78,7 @@ public class TcpClient implements ITcpClient {
                     .channel(NioSocketChannel.class)
                     .option(ChannelOption.TCP_NODELAY, true);
             bootstrap.group(WORKER_GROUP);
-            this.connect();
+            this.connect(serverHost, serverPort);
         } catch (Exception e) {
             e.printStackTrace();
             WORKER_GROUP.shutdownGracefully();
@@ -80,13 +88,17 @@ public class TcpClient implements ITcpClient {
     /**
      * 连接服务器
      */
-    private void connect() throws InterruptedException {
-        ChannelFuture future = bootstrap.connect(brokerHost, brokerPort).sync();
+    public void connect(String ip, Integer port) throws InterruptedException {
+        this.disconnect();
+        this.serverHost = ip;
+        this.serverPort = port;
+        ChannelFuture future = bootstrap.connect(serverHost, serverPort).sync();
         if (future.isSuccess()) {
             socketChannel = (SocketChannel) future.channel();
             log.info("connect server success");
         }
     }
+
 
     /**
      * 销毁

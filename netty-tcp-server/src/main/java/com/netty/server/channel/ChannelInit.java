@@ -24,8 +24,8 @@ public class ChannelInit extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel channel) {
         channel.pipeline()
-                // 每隔5s的时间触发一次userEventTriggered的方法，并且指定IdleState的状态位是WRITER_IDLE
-                .addLast("idle", new IdleStateHandler(0, 60, 0, TimeUnit.SECONDS))
+                // 心跳时间
+                .addLast("idle", new IdleStateHandler(0, 0, 60, TimeUnit.SECONDS))
                 // 添加解码器
                 .addLast(new StringDecoder())
                 // 添加编码器
