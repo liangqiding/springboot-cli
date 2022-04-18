@@ -1,0 +1,56 @@
+// 显示声明使用proto3, 否则使用默认的proto2
+syntax = "proto3";
+// 生成类的包名
+option java_package = "com.netty.client.procotol";
+// 生成类的文件名
+option java_outer_classname = "MessageBuf";
+// 定义的所有消息、枚举和服务生成对应的多个类文件，而不是以内部类的形式出现
+option java_multiple_files = false;
+ 
+
+// 消息整合，便于netty导入编码解码器
+message Message {
+  // 包类型
+  PackType packType = 1;
+  
+  oneof Pack{
+      LoginRequest loginRequest = 2;
+	  LoginResponse loginResponse = 3;
+	  MessageRequest messageRequest = 4;
+	  MessageResponse messageResponse = 5;
+  }
+  
+  enum PackType {
+     LOGIN_REQ = 0;
+	 LOGIN_RESP = 1;
+	 MESSAGE_REQ = 2;
+	 MESSAGE_RESP = 3;
+  }
+  
+}
+ 
+// 登录请求,包含用户名
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+// 登录响应
+message LoginResponse {
+  int32 code = 1;
+  string message = 2;
+}
+ 
+// 消息请求
+message MessageRequest {
+  int32 messageId = 1;
+  int32 type = 2;
+  string data = 3;
+}
+
+// 消息响应
+message MessageResponse {
+  int32 messageId = 1;
+  int32 code = 2;
+  string message = 3;
+}

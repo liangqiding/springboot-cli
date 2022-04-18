@@ -1,21 +1,17 @@
-server:
-  port: 9999
-
 spring:
   application:
-    name: tcp-client
+    name: tcp-server
 
 # tcp
 tcp:
-  client:
-    host: 127.0.0.1
-    port: 19999
-  # 要连接的服务器ip和端口
   server:
     host: 127.0.0.1
     port: 20000
+    # 传输模式linux上开启会有更高的性能
+    use-epoll: false
 
 # 日记配置
 logging:
   level:
+    # 开启debug日记打印
     com.netty: debug
