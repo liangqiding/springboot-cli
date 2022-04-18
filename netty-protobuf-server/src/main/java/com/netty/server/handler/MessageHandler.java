@@ -3,7 +3,6 @@ package com.netty.server.handler;
 import com.netty.server.procotol.MessageBuf;
 import com.netty.server.store.ChannelStore;
 import com.netty.server.utils.MessageBuilder;
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -12,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * MQTT消息处理,单例启动
+ * Protubuf 消息处理,单例启动
  *
  * @author qiding
  */
@@ -21,7 +20,6 @@ import org.springframework.stereotype.Component;
 @ChannelHandler.Sharable
 @RequiredArgsConstructor
 public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.Message> {
-
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageBuf.Message message) throws Exception {
@@ -32,27 +30,16 @@ public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.Messa
             case LOGIN_REQ:
                 log.debug("收到登录消息\n{}", message.getLoginRequest());
                 // 回复客户端
-                ctx.writeAndFlush(MessageBuilder.loginResp("login successfully", 200));
+                ctx.writeAndFlush(MessageBuilder.newLoginResp("login successfully", 200));
                 break;
             case MESSAGE_REQ:
                 log.debug("收到普通消息{}", message.getMessageRequest());
                 // 回复客户端
-                ctx.writeAndFlush(MessageBuilder.messageResp(message.getMessageRequest().getMessageId(), "ok", 200));
+                ctx.writeAndFlush(MessageBuilder.newMessageResp(message.getMessageRequest().getMessageId(), "ok", 200));
                 break;
             default:
                 log.error("不支持的消息类型");
         }
-    }
-
-    /**
-     * 指定客户端发送
-     *
-     * @param clientId 其它已成功登录的客户端
-     * @param message  消息
-     */
-    public void sendByClientId(String clientId, String message) {
-        Channel channel = ChannelStore.getChannel(clientId);
-        channel.writeAndFlush(message);
     }
 
     @Override

@@ -52,15 +52,15 @@ public class MessageHandler extends SimpleChannelInboundHandler<MessageBuf.Messa
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         log.debug("\n");
-        log.info("成功建立连接,channelId：{}", ctx.channel().id());
+        log.debug("成功建立连接,channelId：{}", ctx.channel().id());
         super.channelActive(ctx);
     }
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
-        log.info("心跳事件时触发");
+        log.debug("心跳事件时触发");
         if (evt instanceof IdleStateEvent) {
-            log.info("发送心跳");
+           // 发送心跳包给服务器
         } else {
             super.userEventTriggered(ctx, evt);
         }

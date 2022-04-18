@@ -17,7 +17,7 @@ import javax.annotation.PreDestroy;
 import java.net.InetSocketAddress;
 
 /**
- * 启动 Broker
+ * 启动 Server
  *
  * @author qiding
  */

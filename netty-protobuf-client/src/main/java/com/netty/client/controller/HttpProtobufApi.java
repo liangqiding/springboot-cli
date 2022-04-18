@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 @Slf4j
-public class HttpApi {
+public class HttpProtobufApi {
 
     private final TcpClient tcpClient;
 
