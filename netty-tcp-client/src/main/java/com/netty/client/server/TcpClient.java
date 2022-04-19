@@ -68,7 +68,7 @@ public class TcpClient implements ITcpClient {
     }
 
     /**
-     * mqttBroker初始化
+     * Client初始化
      */
     private void tcpClient() {
         try {
