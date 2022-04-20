@@ -1,6 +1,6 @@
 package com.netty.server.handler;
 
-import com.netty.server.procotol.MessageBuf;
+import com.netty.server.protocol.MessageBuf;
 import com.netty.server.store.ChannelStore;
 import com.netty.server.utils.MessageBuilder;
 import io.netty.channel.ChannelHandler;

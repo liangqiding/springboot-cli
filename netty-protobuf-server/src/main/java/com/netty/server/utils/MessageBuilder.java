@@ -1,7 +1,7 @@
 package com.netty.server.utils;
 
 
-import com.netty.server.procotol.MessageBuf;
+import com.netty.server.protocol.MessageBuf;
 
 /**
  * protobuf 消息构建
