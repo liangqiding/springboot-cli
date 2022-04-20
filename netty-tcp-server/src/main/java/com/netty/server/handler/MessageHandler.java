@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * MQTT消息处理,单例启动
+ * 消息处理,单例启动
  *
  * @author qiding
  */

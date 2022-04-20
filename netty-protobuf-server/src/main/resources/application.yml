@@ -3,7 +3,7 @@ spring:
     name: tcp-server
 
 # tcp
-tcp:
+netty:
   server:
     host: 127.0.0.1
     port: 20000

@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "netty.server.host",
+      "type": "java.lang.String",
+      "description": "监听的ip."
+    },
+    {
+      "name": "netty.server.port",
+      "type": "java.lang.String",
+      "description": "监听的端口."
+    },
+    {
+      "name": "netty.server.use-epoll",
+      "type": "java.lang.String",
+      "description": "传输模式linux上开启会有更高的性能."
+    }
+  ] }

@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 /**
- * Protubuf 消息处理,单例启动
+ * Protobuf 消息处理,单例启动
  *
  * @author qiding
  */

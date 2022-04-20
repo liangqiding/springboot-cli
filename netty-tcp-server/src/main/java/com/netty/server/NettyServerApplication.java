@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 /**
- * @author qiding
+ * @author ding
  */
 @SpringBootApplication
 @RequiredArgsConstructor

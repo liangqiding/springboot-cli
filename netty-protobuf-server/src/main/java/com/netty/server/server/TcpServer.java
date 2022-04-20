@@ -2,6 +2,7 @@ package com.netty.server.server;
 
 
 import com.netty.server.channel.ChannelInit;
+import com.netty.server.config.ServerProperties;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -28,24 +29,18 @@ public class TcpServer implements ITcpServer {
 
     private final ChannelInit channelInit;
 
+    private final ServerProperties serverProperties;
+
     private EventLoopGroup bossGroup;
 
     private EventLoopGroup workerGroup;
 
-    @Value("${tcp.server.host}")
-    private String host;
-
-    @Value("${tcp.server.port}")
-    private Integer port;
-
-    @Value("${tcp.server.use-epoll}")
-    private boolean useEpoll;
 
     @Override
     public void start() throws Exception {
         log.info("初始化 server ...");
-        bossGroup = useEpoll ? new EpollEventLoopGroup() : new NioEventLoopGroup();
-        workerGroup = useEpoll ? new EpollEventLoopGroup() : new NioEventLoopGroup();
+        bossGroup = serverProperties.isUseEpoll() ? new EpollEventLoopGroup() : new NioEventLoopGroup();
+        workerGroup = serverProperties.isUseEpoll() ? new EpollEventLoopGroup() : new NioEventLoopGroup();
         this.tcpServer();
     }
 
@@ -57,8 +52,8 @@ public class TcpServer implements ITcpServer {
         try {
             new ServerBootstrap()
                     .group(bossGroup, workerGroup)
-                    .channel(useEpoll ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
-                    .localAddress(new InetSocketAddress(port))
+                    .channel(serverProperties.isUseEpoll() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
+                    .localAddress(new InetSocketAddress(serverProperties.getPort()))
                     // 配置 编码器、解码器、业务处理
                     .childHandler(channelInit)
                     // tcp缓冲区
@@ -69,7 +64,7 @@ public class TcpServer implements ITcpServer {
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
                     // 绑定端口，开始接收进来的连接
                     .bind().sync();
-            log.info("server启动成功！开始监听端口：{}", port);
+            log.info("server启动成功！开始监听端口：{}", serverProperties.getPort());
         } catch (Exception e) {
             e.printStackTrace();
             bossGroup.shutdownGracefully();

@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "tcp.client-port",
+      "type": "java.lang.String",
+      "description": "客户端端口 tcp.client-port."
+    },
+    {
+      "name": "tcp.server-ip",
+      "type": "java.lang.String",
+      "description": "默认连接的服务器ip tcp.server-ip."
+    },
+    {
+      "name": "tcp.server-port",
+      "type": "java.lang.String",
+      "description": "默认连接的服务器端口 tcp.server-port."
+    }
+  ]
+}

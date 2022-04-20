@@ -1,7 +1,30 @@
+# 基于netty的 protobuf服务器
+
 ## 简介
 
 附件doc中已包含相应的文件及文档，也可以自行到官网下载最新版
 [参考官网中文文档](https://lixiangyun.gitbook.io/protobuf3/)
+
+## 环境
+
+ | #    | 环境 | 版本           | 说明            |
+ | ---- | ---- | -------------- | --------------- |
+ | 1    | JDK  | openJdk 11.0.8 | 建议JDK11及以上 |
+
+## 项目结构
+
+```
+ ├──channel          管道
+ ├──config           服务核心配置
+ ├──handler          消息处理器
+ ├──procotol         协议文件
+ ├──server           服务配置
+ ├──store            频道存储
+ ├──utils            工具包
+ ├──NettyClientApplication.java   主启动类
+```
+
+## 使用教程
 
 #### 1. 下载解压文件
 

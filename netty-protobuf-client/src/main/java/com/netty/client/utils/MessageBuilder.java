@@ -1,7 +1,7 @@
 package com.netty.client.utils;
 
 
-import com.netty.client.procotol.MessageBuf;
+import com.netty.client.protocol.MessageBuf;
 
 /**
  * protobuf 消息构建
