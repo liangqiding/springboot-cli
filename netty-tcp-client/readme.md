@@ -20,3 +20,33 @@ netty是jboss提供的一个java开源框架，netty提供异步的、事件驱�
  ├──utils            工具包
  ├──NettyClientApplication.java   主启动类
 ```
+
+## 接口
+
+> 基础地址：http://localhost:9999
+
+```json
+# 1. 发送消息
+/send?message=hello
+# 2. 连接
+/connect?ip=192.168.0.99&port=20000
+# 3. 重连
+/reconnect
+# 5. 发送json
+```json
+Request URL:  http://localhost:9999/send/json
+Request Method: POST
+Request Headers:
+{
+   "Content-Type":"application/json"
+}
+Request Body:
+{
+   "msgId": 1,
+   "type": 1,
+   "data": {
+            "message":"hello"
+           }
+}
+```
+

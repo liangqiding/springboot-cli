@@ -28,8 +28,13 @@ import java.net.URISyntaxException;
 @RequiredArgsConstructor
 public class MessageHandler extends SimpleChannelInboundHandler<Object> {
 
+    /**
+     * websocket会话存储
+     */
     private WebSocketClientHandshaker handShaker;
-
+    /**
+     * 用于回调判断握手是否成功
+     */
     private ChannelPromise handshakeFuture;
 
     @Override
@@ -102,7 +107,5 @@ public class MessageHandler extends SimpleChannelInboundHandler<Object> {
         } else {
             super.userEventTriggered(ctx, evt);
         }
-
-
     }
 }

@@ -22,3 +22,35 @@
  ├──utils            工具包
  ├──NettyClientApplication.java   主启动类
 ```
+
+## 测试接口
+
+>  基础地址 http://localhost:9999
+
+```json
+1. 登录
+/login?username=admin&password=123456
+2. 发送消息
+/send?msgId=1&type=1&data=hello
+3. 连接
+/connect?ip=192.168.0.99&port=20000
+4. 重连
+/reconnect
+5. 发送json
+```json
+Request URL:  http://localhost:9999/send/json
+Request Method: POST
+Request Headers:
+{
+   "Content-Type":"application/json"
+}
+Request Body:
+{
+   "msgId": 1,
+   "type": 1,
+   "data": {
+            "message":"hello"
+           }
+}
+```
+

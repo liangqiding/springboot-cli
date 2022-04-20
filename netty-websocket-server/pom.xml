@@ -16,7 +16,7 @@
     <properties>
         <java.version>11</java.version>
         <netty-all.version>4.1.75.Final</netty-all.version>
-        <fastjson.version>1.2.75</fastjson.version>
+        <fastjson.version>1.2.80</fastjson.version>
     </properties>
     <dependencies>
         <dependency>

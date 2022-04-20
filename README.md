@@ -7,7 +7,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 - 代码优雅整洁
 - 遵守阿里编程规范，高质量、高效率
 - 统一的注释方法和风格
-- 项目还在持续增加且持续更新维护
+- 项目持续增加、持续更新维护
 
 ---
 
@@ -21,8 +21,8 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 2    | netty-tcp-server       | tcp 服务器              | 完成 | 2022.4.17 | [完整搭建过程](http://t.csdn.cn/ti5xA) |
 | 3    | netty-protobuf-client  | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/Lneul) |
 | 4    | netty-protobuf-server  | tcp protobuf 服务器     | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/yCpAe) |
-| 5    | netty-websocket-client | webcocket客户端         | 完成 | 2022.4.20 | 更新中                                 |
-| 6    | netty-websocket-server | websocket服务器         | 完成 | 2022.4.20 | 更新中                                 |
+| 5    | netty-websocket-client | webcocket客户端         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/ANdaj) |
+| 6    | netty-websocket-server | websocket服务器         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/uLfIZ) |
 
 ## 常用项目
 
