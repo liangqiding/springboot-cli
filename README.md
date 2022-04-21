@@ -23,7 +23,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/yCpAe) |
 | 5    | [netty-websocket-client](./netty-websocket-client) | webcocket客户端         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/ANdaj) |
 | 6    | [netty-websocket-server](./netty-websocket-server) | websocket服务器         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/uLfIZ) |
-| 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | netty实现mqtt broker 及 client | 完成 | 2022.4.10 |  |
+| 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | mqtt broker 及 client | 完成 | 2022.4.10 |  |
 
 ## 常用项目
 
@@ -31,9 +31,9 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 | #    | 目录                                         | 说明                    | 状态 | 更新时间  | 文档                                   |
 | ---- | ------------------------------------------------------------ | ----------------------- | ---- | --------- | -------------------------------------- |
-| 1    | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
-| 2 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 |                                        |
-| 3 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger | 完成 | 2022.4.21 |                                        |
+| 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/2lJPj) |
+| 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
+| 3    | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
 | 4 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 |                                        |
 | 5    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
 | 6    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |

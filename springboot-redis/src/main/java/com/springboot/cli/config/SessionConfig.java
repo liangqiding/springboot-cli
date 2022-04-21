@@ -6,8 +6,8 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 /**
  * 共享session实现
  */
-//@Configuration
-//@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400 * 30)
-//public class SessionConfig {
-//
-//}
+@Configuration
+@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400 * 30)
+public class SessionConfig {
+
+}

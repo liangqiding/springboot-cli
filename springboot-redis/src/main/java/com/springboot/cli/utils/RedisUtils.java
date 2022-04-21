@@ -19,8 +19,7 @@ public class RedisUtils {
 
     public <T> T get(String key, Class<T> c) {
         Object o = redisTemplate.opsForValue().get(key);
-        assert o != null;
-        return JSON.parseObject(o.toString(), c);
+        return JSON.parseObject(JSON.toJSONString(o), c);
     }
 
 }

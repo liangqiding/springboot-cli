@@ -28,7 +28,7 @@ public class IndexController {
      */
     @GetMapping("/get")
     public String get() {
-        User test = redisUtils.get("test", User.class);
+        User test = redisUtils.get("test",User.class);
         System.out.println(test);
         return "获取成功 ！";
     }
