@@ -8,11 +8,11 @@
         <version>2.5.3</version>
         <relativePath/>
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>springboot-jwt</artifactId>
+    <groupId>com.springboot.cli</groupId>
+    <artifactId>springboot-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-jwt</name>
-    <description>springboot-jwt</description>
+    <name>springboot-redis</name>
+    <description>springboot-redis</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -20,6 +20,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--   redis包     -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--    session存储进redis共享，配合nginx直接实现分布式部署，简单粗暴    -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.80</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -31,28 +46,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--swagger3-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <!-- jwt -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.auth0</groupId>
-            <artifactId>java-jwt</artifactId>
-            <version>3.18.3</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -63,7 +56,7 @@
                 <configuration>
                     <excludes>
                         <exclude>
-                            <groupId>org.projectlombok</groupId>
+                            <groupId>org.projectors</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>

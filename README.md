@@ -15,14 +15,14 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 `基于Springboot、netty的tcp项目模板`
 
-| #    | 项目名                 | 说明                    | 状态 | 更新时间  | 文档                                   |
-| ---- | ---------------------- | ----------------------- | ---- | --------- | -------------------------------------- |
-| 1    | netty-tcp-client       | tcp 客户端              | 完成 | 2022.4.17 | [完整搭建过程](http://t.csdn.cn/yvjS5) |
-| 2    | netty-tcp-server       | tcp 服务器              | 完成 | 2022.4.17 | [完整搭建过程](http://t.csdn.cn/ti5xA) |
-| 3    | netty-protobuf-client  | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/Lneul) |
-| 4    | netty-protobuf-server  | tcp protobuf 服务器     | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/yCpAe) |
-| 5    | netty-websocket-client | webcocket客户端         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/ANdaj) |
-| 6    | netty-websocket-server | websocket服务器         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/uLfIZ) |
+| #    | 项目名                                 | 说明                    | 状态 | 更新时间  | 文档                                   |
+| ---- | -------------------------------------- | ----------------------- | ---- | --------- | -------------------------------------- |
+| 1    | [netty-tcp-client](./netty-tcp-client) | tcp 客户端              | 完成 | 2022.4.17 | [完整搭建过程](http://t.csdn.cn/yvjS5) |
+| 2    | netty-tcp-server                       | tcp 服务器              | 完成 | 2022.4.17 | [完整搭建过程](http://t.csdn.cn/ti5xA) |
+| 3    | netty-protobuf-client                  | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/Lneul) |
+| 4    | netty-protobuf-server                  | tcp protobuf 服务器     | 完成 | 2022.4.18 | [完整搭建过程](http://t.csdn.cn/yCpAe) |
+| 5    | netty-websocket-client                 | webcocket客户端         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/ANdaj) |
+| 6    | netty-websocket-server                 | websocket服务器         | 完成 | 2022.4.20 | [完整搭建过程](http://t.csdn.cn/uLfIZ) |
 
 ## 常用项目
 

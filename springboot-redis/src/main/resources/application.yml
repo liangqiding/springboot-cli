@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  # redis 配置
+  redis:
+    database: 5
+    host: 192.168.0.251
+    port: 6379
+    #连接超时时间
+    timeout: 3
+    password: 123456
+    #连接池配置
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
