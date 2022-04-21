@@ -25,7 +25,7 @@ netty是jboss提供的一个java开源框架，netty提供异步的、事件驱�
 
 > 基础地址：http://localhost:9999
 
-```json
+```go
 # 1. 发送消息
 /send?message=hello
 # 2. 连接

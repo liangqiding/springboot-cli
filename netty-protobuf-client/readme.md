@@ -27,7 +27,7 @@
 
 >  基础地址 http://localhost:9999
 
-```json
+```go
 1. 登录
 /login?username=admin&password=123456
 2. 发送消息

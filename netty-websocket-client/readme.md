@@ -26,7 +26,7 @@
 
 > 基础地址 http://localhost:9999
 
-```json
+```go
 # 1. 发送消息
 /send?message=hello
 # 2. 连接
