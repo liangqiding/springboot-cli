@@ -2,6 +2,7 @@ package com.springboot.cli.controller;
 
 
 import com.springboot.cli.entity.User;
+import com.springboot.cli.service.IUserService;
 import com.springboot.cli.utils.RedisUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,24 +13,36 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class IndexController {
 
-    private final RedisUtils redisUtils;
+    private final IUserService userService;
 
     /**
-     * 设置缓存
+     * 注解自动实现缓存
+     */
+    @GetMapping("/getUser")
+    public User getUser(Long id) {
+        return userService.getUser(id);
+    }
+
+    @GetMapping("/delUser")
+    public String delUser(Long id) {
+        userService.delUser(id);
+        return "删除成功";
+    }
+
+    /**
+     * 手动设置缓存
      */
     @GetMapping("/set")
     public String set() {
-        redisUtils.set("test", new User().setUserId(1L).setSex("男").setUsername("王小锤"));
+        RedisUtils.save("key", new User().setUserId(1L).setSex("男").setUsername("王小锤"), 6000);
         return "设置成功 ！";
     }
 
     /**
-     * 获取缓存
+     * 手动获取缓存
      */
     @GetMapping("/get")
-    public String get() {
-        User test = redisUtils.get("test",User.class);
-        System.out.println(test);
-        return "获取成功 ！";
+    public User get() {
+        return RedisUtils.get("key", User.class);
     }
 }

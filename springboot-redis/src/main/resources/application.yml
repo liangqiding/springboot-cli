@@ -4,11 +4,11 @@ server:
 spring:
   # redis 配置
   redis:
-    database: 0
-    host: 192.168.41.128
+    database: 4
+    host: 192.168.0.251
     port: 6379
     #连接超时时间
-    timeout: 3
+    timeout: 3000
     password: 123456
     #连接池配置
     lettuce:
