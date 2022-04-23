@@ -17,11 +17,13 @@
         <java.version>11</java.version>
     </properties>
     <dependencies>
+        <!--       省略get set -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--       测试接口 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

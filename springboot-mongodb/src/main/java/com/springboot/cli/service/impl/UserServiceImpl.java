@@ -1,18 +1,15 @@
 package com.springboot.cli.service.impl;
 
-import com.mongodb.client.result.DeleteResult;
 import com.springboot.cli.entity.User;
 import com.springboot.cli.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.Document;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
