@@ -2,7 +2,7 @@
 
 ## 介绍
 
-Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的文档并附带搭建过程讲解，致力于让开发者快速搭建基础环境并让应用跑起来。
+Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的文档并附带搭建过程讲解，致力于让开发者快速搭建基础环境并让应用跑起来，并提供丰富的使用示例供使用者参考，快速上手。
 
 - 代码优雅整洁
 - 遵守阿里编程规范，高质量、高效率
@@ -34,7 +34,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/2lJPj) |
 | 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
 | 3    | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
-| 4 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 |                                        |
+| 4 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
 | 5    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
 | 6    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
 | 7    | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |

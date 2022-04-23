@@ -4,8 +4,8 @@ server:
 spring:
   # redis 配置
   redis:
-    database: 4
-    host: 192.168.0.251
+    database: 0
+    host: 192.168.41.128
     port: 6379
     #连接超时时间
     timeout: 3000

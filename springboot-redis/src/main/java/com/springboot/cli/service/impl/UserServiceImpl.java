@@ -20,7 +20,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    @CacheEvict(value = "user-key",allEntries = true)
+    @CacheEvict(value = "user-key", allEntries = true)
     public void delUser(Long id) {
         this.delUserInfo(id);
     }
@@ -34,6 +34,6 @@ public class UserServiceImpl implements IUserService {
      */
     private User getUserInfo(Long id) {
         log.info("获取用户数据执行了！！");
-        return new User().setUserId(id).setUsername("王小锤").setSex("男");
+        return new User().setUserId(id).setUsername("王小锤").setSex("男").setRemark("注解方式aop实现缓存");
     }
 }

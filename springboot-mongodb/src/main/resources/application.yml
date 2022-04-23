@@ -1,0 +1,11 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: springboot-mongodb
+  data:
+    mongodb:
+      uri: mongodb://192.168.41.128:27017/test
+
+

@@ -5,39 +5,18 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.9.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.5.3</version>
+        <relativePath/>
     </parent>
-    <groupId>com.netty</groupId>
-    <artifactId>protobuf-client</artifactId>
+    <groupId>com.springboot</groupId>
+    <artifactId>cli</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nettyClient</name>
-    <description>Demo project for Spring Boot</description>
+    <name>springboot-mongodb</name>
+    <description>springboot-mongodb</description>
     <properties>
         <java.version>11</java.version>
-        <netty-all.version>4.1.75.Final</netty-all.version>
-        <fastjson.version>1.2.80</fastjson.version>
-        <protobuf-java.version>3.20.1-rc-1</protobuf-java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>${protobuf-java.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -48,15 +27,16 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--     mongodb依赖   -->
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>${netty-all.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+        <!--    json 工具包 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
+            <version>1.2.80</version>
         </dependency>
     </dependencies>
 
@@ -68,7 +48,7 @@
                 <configuration>
                     <excludes>
                         <exclude>
-                            <groupId>org.projectlombok</groupId>
+                            <groupId>org.projectors</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>

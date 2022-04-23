@@ -3,6 +3,8 @@ package com.springboot.cli.entity;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.data.annotation.Id;
+
 import java.io.Serializable;
 
 /**
@@ -16,6 +18,7 @@ public class User implements Serializable {
     /**
      * 用户id
      */
+    @Id
     private Long userId;
 
     /**

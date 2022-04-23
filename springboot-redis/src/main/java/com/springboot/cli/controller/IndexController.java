@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequiredArgsConstructor
 public class IndexController {
@@ -23,6 +22,9 @@ public class IndexController {
         return userService.getUser(id);
     }
 
+    /**
+     * 注解自动实现缓存清理
+     */
     @GetMapping("/delUser")
     public String delUser(Long id) {
         userService.delUser(id);
@@ -34,7 +36,7 @@ public class IndexController {
      */
     @GetMapping("/set")
     public String set() {
-        RedisUtils.save("key", new User().setUserId(1L).setSex("男").setUsername("王小锤"), 6000);
+        RedisUtils.save("key", new User().setUserId(999L).setSex("男").setUsername("王小锤").setRemark("手动设置缓存"), 6000);
         return "设置成功 ！";
     }
 
