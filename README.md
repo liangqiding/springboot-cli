@@ -41,5 +41,5 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 8   | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
 | 9 | [springboot-kafka](./springboot-kafka) | 消息kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
 | 10 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
-| 11 | [springboot-scheduler](./springboot-scheduler) | 定时任务封装，统一执行 | 完成 | 2022.4.24 |  |
+| 11 | [springboot-scheduler](./springboot-scheduler) | 定时任务封装，统一执行 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
 

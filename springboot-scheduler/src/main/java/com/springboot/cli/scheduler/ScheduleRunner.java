@@ -2,6 +2,7 @@ package com.springboot.cli.scheduler;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -26,6 +27,7 @@ public class ScheduleRunner {
      * 每秒
      */
     @Scheduled(cron = "*/1 * * * * ?")
+    @Async("scheduleExecutor")
     public void everySecond() {
         scheduleServiceList.forEach(ScheduleService::everySecond);
     }
@@ -34,6 +36,7 @@ public class ScheduleRunner {
      * 每分钟
      */
     @Scheduled(cron = "0 */1 * * * ?")
+    @Async("scheduleExecutor")
     public void everyMinute() {
         scheduleServiceList.forEach(ScheduleService::everyMinute);
     }
@@ -42,6 +45,7 @@ public class ScheduleRunner {
      * 每五分钟
      */
     @Scheduled(cron = "0 */5 * * * ?")
+    @Async("scheduleExecutor")
     public void everyFiveMinute() {
         scheduleServiceList.forEach(ScheduleService::everyFiveMinute);
     }
@@ -50,6 +54,7 @@ public class ScheduleRunner {
      * 每小时
      */
     @Scheduled(cron = "0 0 */1 * * ?")
+    @Async("scheduleExecutor")
     public void everyHour() {
         scheduleServiceList.forEach(ScheduleService::everyHour);
     }
@@ -58,6 +63,7 @@ public class ScheduleRunner {
      * 每天上午8点
      */
     @Scheduled(cron = "0 0 8 * * ?")
+    @Async("scheduleExecutor")
     public void everyDayEightClock() {
         scheduleServiceList.forEach(ScheduleService::everyDayEightClock);
     }
