@@ -39,5 +39,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 6   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
 | 7   | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
 | 8   | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
-| 9   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 9 | [springboot-kafka](./springboot-kafka) | 消息kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
+| 10 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 11 | [springboot-scheduler](./springboot-scheduler) | 定时任务封装，统一执行 | 完成 | 2022.4.24 |  |
 

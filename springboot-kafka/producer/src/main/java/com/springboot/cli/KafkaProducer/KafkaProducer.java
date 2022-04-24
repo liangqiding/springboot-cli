@@ -14,7 +14,6 @@ public class KafkaProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-
     /**
      * 发送json消息
      *
@@ -25,6 +24,5 @@ public class KafkaProducer {
         kafkaTemplate.send(topic, message);
         log.info("send success");
     }
-
 
 }

@@ -23,7 +23,7 @@ public class KafkaConsumer {
     public void kafkaListener(ConsumerRecord<String, String> consumerRecord) {
         String value = consumerRecord.value();
         if (log.isInfoEnabled()) {
-            log.info("offset {}, value {}", consumerRecord.offset(), value);
+            log.info("读取到消息：offset {}, value {}", consumerRecord.offset(), value);
         }
         if (null == value) {
             log.error("kafka消费数据为空");
