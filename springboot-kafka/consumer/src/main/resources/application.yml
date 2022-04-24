@@ -1,0 +1,22 @@
+spring:
+  kafka:
+    bootstrap-servers: 192.168.41.128:9092
+    consumer:
+      # 默认的消费组ID
+      group-id: javagroup
+      # 是否自动提交offset
+      enable-auto-commit: true
+      # 提交offset延时(接收到消息后多久提交offset)
+      auto-commit-interval: 100
+      # earliest:当各分区下有已提交的offset时，从提交的offset开始消费；无提交的offset时，从头开始消费
+      # latest:当各分区下有已提交的offset时，从提交的offset开始消费；无提交的offset时，消费新产生的该分区下的数据
+      # none:topic各分区都存在已提交的offset时，从offset后开始消费；只要有一个分区不存在已提交的offset，则抛出异常
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+kafka:
+  # 订阅的主题
+  topic: test
+  # 主题消费分组
+  group: group-test
