@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h1>首页</h1>
-<!-- 使用shiro标签 -->
-<shiro:authenticated>
-    <p>用户已登录</p> <a th:href="@{/logout}">退出登录</a>
-</shiro:authenticated>
-<shiro:notAuthenticated>
-    <p>用户未登录</p>　　
-</shiro:notAuthenticated>
+<a th:href="@{/logout}">退出登录</a>
 <br/>
-<a th:href="@{/userInfo}">用户信息</a>
-<a th:href="@{/table2}">table2</a>
-<a th:href="@{/table3}">table3模拟无权限</a>
+<br/>
+<br/>
+<a th:href="@{/userInfo}">全部用户信息</a>
 </body>
 </html>

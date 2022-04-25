@@ -6,6 +6,9 @@ import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author ding
@@ -28,7 +31,25 @@ public class UserServiceImpl implements IUserService {
         return new User()
                 .setName("admin")
                 .setUserId(1L)
+                .setRole("admin")
                 .setUsername("admin")
                 .setPassword("123456");
+    }
+
+    @Override
+    public List<User> listUser() {
+        List<User> users = new ArrayList<>();
+        for (int i = 1; i <= 10; i++) {
+            users.add(new User()
+                    .setName("admin" + i)
+                    .setUserId((long) i)
+                    .setUsername("admin" + i)
+                    .setRole("normal")
+                    .setPassword("1000" + i)
+                    .setEnable(i % 2 == 0)
+                    .setCreatedDate(new Date())
+            );
+        }
+        return users;
     }
 }

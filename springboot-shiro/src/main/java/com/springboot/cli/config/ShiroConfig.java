@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * 过滤器
+ * shiro核心管理器
  *
  * @author ding
  */
@@ -47,7 +47,7 @@ public class ShiroConfig {
     public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier("userRealm") UserRealm userRealm) {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         //绑定realm对象
-        securityManager.setRealm(userRealm());
+        securityManager.setRealm(userRealm);
         return securityManager;
     }
 
@@ -63,8 +63,7 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
         filterMap.put("/index", ANON);
         filterMap.put("/userInfo", PERMS + "[vip]");
-        filterMap.put("/table2", AUTHC);
-        filterMap.put("/table3", PERMS + "[vip2]");
+        filterMap.put("/table", AUTHC);
         bean.setFilterChainDefinitionMap(filterMap);
         // 设置跳转登陆页
         bean.setLoginUrl("/login");

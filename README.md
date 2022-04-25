@@ -39,8 +39,8 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/2lJPj) |
 | 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
 | 3 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/h1OtT) |
-| 4 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 |  |
-| 5 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 |  |
+| 4 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
+| 5 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/HdIP6) |
 | 6   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
 | 7 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
 | 8   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |

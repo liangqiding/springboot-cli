@@ -44,6 +44,7 @@ public class UserRealm extends AuthorizingRealm {
         } else if (!user.getPassword().equals(password)) {
             throw new IncorrectCredentialsException("密码错误");
         }
+        // 校验完成后，此处我们把用户信息返回，便于后面我们通过Subject获取用户的登录信息
         return new SimpleAuthenticationInfo(user, password, getName());
     }
 

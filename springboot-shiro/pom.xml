@@ -41,21 +41,12 @@
             <artifactId>shiro-core</artifactId>
             <version>${shiro.version}</version>
         </dependency>
-
         <!-- Shiro使用Spring框架 -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>${shiro.version}</version>
         </dependency>
-
-        <!-- Shiro使用EhCache缓存框架 -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-ehcache</artifactId>
-            <version>${shiro.version}</version>
-        </dependency>
-
         <!-- Thymeleaf中使用Shiro标签 -->
         <dependency>
             <groupId>com.github.theborakompanioni</groupId>

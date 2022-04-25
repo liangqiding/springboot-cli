@@ -3,6 +3,7 @@ package com.springboot.cli.service;
 import com.springboot.cli.domain.User;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public interface IUserService {
 
@@ -22,4 +23,11 @@ public interface IUserService {
      * @return 用户信息
      */
     User getUser();
+
+    /**
+     * 模拟10个用户信息
+     *
+     * @return 用户信息数组
+     */
+    List<User> listUser();
 }

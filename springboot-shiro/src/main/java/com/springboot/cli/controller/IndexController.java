@@ -29,14 +29,9 @@ public class IndexController {
         return "userInfo";
     }
 
-    @RequestMapping("/table2")
-    public String table2(Model model) {
-        return "/table2";
-    }
-
-    @RequestMapping("/table3")
-    public String table3(Model model) {
-        return "/table3";
+    @RequestMapping("/table")
+    public String table(Model model) {
+        return "table";
     }
 
     @GetMapping("/login")
@@ -74,7 +69,7 @@ public class IndexController {
 
     @GetMapping("/logout")
     public String logout() {
-        ShiroUtils.logout();
+        SecurityUtils.getSubject().logout();
         return "index";
     }
 

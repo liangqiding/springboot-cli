@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>table1</title>
 </head>
 <body>
-<h1>用户信息</h1>
-<!-- 利用shiro获取用户信息 -->
-用户名：<shiro:principal property="username"/>
-<br/>
-用户完整信息： <shiro:principal/>
+<h1>全部用户信息</h1>
+<!-- if/unless 案例 -->
+<div th:if="${session.user != null}">
+    <!-- switch 案例 -->
+    <div th:switch="${session.user.role}">
+        <p th:case="'admin'">管理员</p>
+        <p th:case="'normal'">普通用户</p>
+    </div>
+</div>
+<div th:unless="${session.user != null}">
+    <a th:href="@{/login}">请先登录</a>
+</div>
 
+<!-- Iteration 案例 -->
+<table>
+    <tr>
+        <th>用户id</th>
+        <th>名称</th>
+        <th>是否启用</th>
+        <th>创建日期</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.userId}">/</td>
+        <td th:text="${user.name}">/</td>
+        <td th:text="${user.enable}? '启用' : '禁止'">/</td>
+        <td th:text="${#dates.format(user.createdDate, 'yyyy-MM-dd HH:mm:ss')}">/</td>
+    </tr>
+</table>
 </body>
 </html>
