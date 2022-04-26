@@ -49,6 +49,6 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 11 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
 | 12 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
 | 13 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 14 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 | 更新中 |
-| 15 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 | 更新中 |
+| 14 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
+| 15 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
 
