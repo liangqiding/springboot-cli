@@ -28,7 +28,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/yCpAe) |
 | 5    | [netty-websocket-client](./netty-websocket-client) | webcocket客户端         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/ANdaj) |
 | 6    | [netty-websocket-server](./netty-websocket-server) | websocket服务器         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/uLfIZ) |
-| 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | mqtt broker 及 client | 完成 | 2022.4.10 |  |
+| 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | mqtt broker 及 client | 完成 | 2022.4.10 | [项目讲解](https://github.com/liangqiding/mind-mqtt) |
 
 ## 常用项目
 
@@ -49,4 +49,6 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 11 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
 | 12 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
 | 13 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 14 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 | 更新中 |
+| 15 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 | 更新中 |
 

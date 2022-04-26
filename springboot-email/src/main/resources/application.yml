@@ -1,0 +1,12 @@
+server:
+  port: 9999
+
+
+
+
+email:
+  host: smtp.qq.com
+  from: 742740345@qq.com
+  # zfpuafojkrjzbcch gloeunmispphbcbb
+  pass: zfpuafojkrjzbcch
+  port: 25
