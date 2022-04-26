@@ -28,6 +28,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -37,13 +42,13 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.22</version>
         </dependency>
-        <!--       邮件依赖，配置hutool工具包发送邮件  -->
+        <!-- 邮件依赖，配置hutool工具包发送邮件  -->
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
-        <!-- 模板引擎 -->
+        <!-- 模板引擎，制作邮件模板 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
