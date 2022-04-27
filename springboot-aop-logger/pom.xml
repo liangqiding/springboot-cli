@@ -8,31 +8,28 @@
         <version>2.5.3</version>
         <relativePath/>
     </parent>
-    <groupId>com.springboot</groupId>
-    <artifactId>cli</artifactId>
+    <groupId>com.springboot.cli</groupId>
+    <artifactId>springboot-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mongodb</name>
-    <description>springboot-mongodb</description>
+    <name>springboot-web</name>
+    <description>springboot-web</description>
     <properties>
         <java.version>11</java.version>
     </properties>
     <dependencies>
-        <!--       省略get set -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!--       测试接口 -->
+        <!-- aop依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!--     mongodb依赖   -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--    json 工具包 -->
         <dependency>
@@ -40,7 +37,12 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.80</version>
         </dependency>
-
+        <!--    工具包  -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.22</version>
+        </dependency>
     </dependencies>
 
     <build>

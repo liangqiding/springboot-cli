@@ -6,7 +6,7 @@ server:
 
 email:
   host: smtp.qq.com
-  from: 742740345@qq.com
-  # zfpuafojkrjzbcch gloeunmispphbcbb
-  pass: zfpuafojkrjzbcch
+  from: xx@qq.com
+  # 密码自行登录邮箱开启获取，操作很简单
+  pass: gydvhjbghjjfghhhb
   port: 25

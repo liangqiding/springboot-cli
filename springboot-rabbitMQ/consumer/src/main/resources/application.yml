@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: rabbitmq-consumer
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    # 手动提交ack消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
+

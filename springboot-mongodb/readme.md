@@ -10,7 +10,7 @@
 
 - 打开测试类
 
-路径：`src\test\java\com\springboot\cli\JwtDomeApplicationTests`
+路径：`src\test\java\com\springboot\cli\MongodbApplicationTests`
 
 - 运行测试方法
 

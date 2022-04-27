@@ -47,8 +47,10 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 9   | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
 | 10  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
 | 11 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
-| 12 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
-| 13 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 14 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
-| 15 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
+| 12 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
+| 13 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 14 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 15 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
+| 16 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
+| 17 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
 
