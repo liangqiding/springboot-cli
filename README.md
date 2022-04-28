@@ -37,20 +37,21 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | #    | 目录                                         | 说明                    | 状态 | 更新时间  | 文档                                   |
 | ---- | ------------------------------------------------------------ | ----------------------- | ---- | --------- | -------------------------------------- |
 | 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/2lJPj) |
-| 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
-| 3 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/h1OtT) |
-| 4 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
-| 5 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/HdIP6) |
-| 6   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
-| 7 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
-| 8   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
-| 9   | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
-| 10  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
-| 11 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
-| 12 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
-| 13 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
-| 14 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 15 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
-| 16 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
-| 17 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
+| 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger3 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
+| 3 | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 |  |
+| 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/h1OtT) |
+| 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
+| 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/HdIP6) |
+| 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
+| 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
+| 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
+| 10  | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
+| 11  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
+| 12 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
+| 13 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
+| 14 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 15 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 16 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
+| 17 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
+| 18 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
 

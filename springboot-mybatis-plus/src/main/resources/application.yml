@@ -2,63 +2,31 @@
 #           http://${ip}:10131/swagger-ui/index.html                      #
 #==========================================================================
 server:
-  port: 10100
+  port: 9999
 spring:
   main:
     allow-circular-references: true
-
-  application:
-    name: AuthSercurity
-  profiles:
-    active: test
-  ##################################################################################################
-  #                               mysql
-  #                           192.168.60.119:8848
-  ##################################################################################################
+# mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.41.128:3306/mind_links_core?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/example?useUnicode=true&useSSL=false&characterEncoding=utf8&useTimezone=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&useServerPrepStmts=true&allowMultiQueries=true
     username: root
     password: 123456
-    #####################################  druid #####################################################
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    # 打开PSCache
-    poolPreparedStatements: true
-    #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
-    #如果运行时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
-    #则导入 log4j 依赖即可，Maven 地址： https://mvnrepository.com/artifact/log4j/log4j
-    filters: stat,wall,log4j,config
-    #指定每个连接上PSCache的大小
-    maxPoolPreparedStatementPerConnectionSize: 20
-    #合并多个DruidDataSource的监控数据
-    useGlobalDataSourceStat: true
-    #通过connectProperties属性来打开mergeSql功能；慢SQL记录
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 ##################################################################################################
 #                               mybatis-plus
-#
 ##################################################################################################
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.example.mybatis_generation.domain
+  typeAliasesPackage: com.springboot.cli.domain
   global-config:
-    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
-    id-type: 0
-    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
-    field-strategy: 1
-    #驼峰下划线转换
-    #刷新mapper 调试神器
-    refresh-mapper: true
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+    banner: false
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false

@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.5.3</version>
+        <relativePath/>
     </parent>
     <groupId>com.springboot</groupId>
-    <artifactId>mybatis-plus</artifactId>
+    <artifactId>springboot-druid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mybatis_generation</name>
-    <description>mybatis-plus</description>
+    <name>springboot-druid</name>
+    <description>springboot-druid</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -31,34 +31,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--分页插件-->
+        <!--    json 工具包 -->
         <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.13</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <!--引入mybatis-plus依赖-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.1</version>
-        </dependency>
-        <!--引入mybatis-plus代码生成器依赖-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.3.1</version>
-        </dependency>
-        <!--模板引擎-->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-            <version>2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -70,10 +53,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.75</version>
         </dependency>
+        <!--     hu tool 工具包  -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.8.0.M2</version>
+            <version>5.7.22</version>
         </dependency>
     </dependencies>
 
@@ -85,7 +69,7 @@
                 <configuration>
                     <excludes>
                         <exclude>
-                            <groupId>org.projectlombok</groupId>
+                            <groupId>org.projectors</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
