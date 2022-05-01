@@ -1,2 +1,2 @@
-server:
-  port: 9999
+elasticsearch:
+  url: 192.168.41.128:9200

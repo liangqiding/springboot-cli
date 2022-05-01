@@ -54,4 +54,5 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 16 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
 | 17 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
 | 18 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
+| 19 | [springboot-elasticsearch](./springboot-elasticsearch) | es索引引擎 | 完成 | 2022.5.1 | |
 
