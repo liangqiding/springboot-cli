@@ -1,0 +1,10 @@
+server:
+  port: 9999
+
+minio:
+  endpoint: http://localhost:9000
+  accessKey: root
+  secretKey: 123456
+  secure: false
+  bucketName: map
+  configDir: /home/data/
