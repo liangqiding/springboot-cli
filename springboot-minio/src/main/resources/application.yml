@@ -2,9 +2,8 @@ server:
   port: 9999
 
 minio:
-  endpoint: http://localhost:9000
-  accessKey: root
-  secretKey: 123456
+  endpoint: http://192.168.41.128:20000
+  accessKey: admin
+  secretKey: 12345678
   secure: false
-  bucketName: map
-  configDir: /home/data/
+  bucketName: test

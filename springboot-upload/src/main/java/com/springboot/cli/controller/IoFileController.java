@@ -1,8 +1,8 @@
-package m.links.file.controller;
+package com.springboot.cli.controller;
 
+import com.springboot.cli.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
-import m.links.file.utils.FileUtils;
-import m.links.file.utils.ResponseResult;
+import com.springboot.cli.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

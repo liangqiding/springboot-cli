@@ -41,10 +41,6 @@ public class MinioProperties {
      */
     private String bucketName;
 
-    /**
-     * 配置目录
-     */
-    private String configDir;
 
     @Bean
     public MinioClient getMinioClient() throws Exception {

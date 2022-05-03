@@ -1,7 +1,9 @@
 package com.springboot.cli.minio;
 
+import cn.hutool.core.io.IoUtil;
 import com.springboot.cli.config.MinioProperties;
 import io.minio.*;
+import io.minio.errors.*;
 import io.minio.messages.DeleteError;
 import io.minio.messages.DeleteObject;
 import io.minio.messages.Item;
@@ -21,10 +23,12 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.lang.System.in;
 
 /**
  * minio
@@ -45,8 +49,13 @@ public class MinioHandler {
      *
      * @param name 存储桶名称
      */
-    public boolean existBucket(String name) throws Exception {
-        return minioClient.bucketExists(BucketExistsArgs.builder().bucket(name).build());
+    public boolean existBucket(String name) {
+        try {
+            return minioClient.bucketExists(BucketExistsArgs.builder().bucket(name).build());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     /**
@@ -54,12 +63,14 @@ public class MinioHandler {
      *
      * @param bucketName 存储bucket名称
      */
-    public void makeBucket(String bucketName) throws Exception {
-        if (this.existBucket(bucketName)) {
+    public boolean createdBucket(String bucketName) throws Exception {
+        if (!this.existBucket(bucketName)) {
             minioClient.makeBucket(MakeBucketArgs.builder()
                     .bucket(bucketName)
                     .build());
+            return true;
         }
+        return false;
     }
 
     /**
@@ -67,10 +78,49 @@ public class MinioHandler {
      *
      * @param bucketName 存储bucket名称
      */
-    public void removeBucket(String bucketName) throws Exception {
-        minioClient.removeBucket(RemoveBucketArgs.builder()
-                .bucket(bucketName)
-                .build());
+    public boolean removeBucket(String bucketName) {
+        try {
+            minioClient.removeBucket(RemoveBucketArgs.builder()
+                    .bucket(bucketName)
+                    .build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * description: 上传文件
+     *
+     * @param file 文件
+     * @return: List<String> s
+     */
+    public String saveFile(MultipartFile file) throws Exception {
+        if (Objects.isNull(file)) {
+            return "";
+        }
+        String fileName;
+        try {
+            fileName = file.getOriginalFilename();
+            InputStream in = file.getInputStream();
+            minioClient.putObject(PutObjectArgs.builder()
+                    .bucket(minioProperties.getBucketName())
+                    .object(fileName)
+                    .stream(in, in.available(), -1)
+                    .contentType(file.getContentType())
+                    .build()
+            );
+        } finally {
+            Optional.ofNullable(in).ifPresent(inputStream -> {
+                try {
+                    inputStream.close();
+                } catch (IOException ignored) {
+                }
+            });
+        }
+        log.info("文件保存成功,文件名：{},类型：{}", fileName, file.getContentType());
+        return fileName;
     }
 
     /**
@@ -78,34 +128,11 @@ public class MinioHandler {
      *
      * @param files 文件
      * @return: List<String> s
-
      */
-    public List<String> upload(MultipartFile[] files) {
+    public List<String> saveFile(MultipartFile[] files) throws Exception {
         List<String> names = new ArrayList<>(files.length);
         for (MultipartFile file : files) {
-            String fileName = file.getOriginalFilename();
-            InputStream in = null;
-            try {
-                in = file.getInputStream();
-                minioClient.putObject(PutObjectArgs.builder()
-                        .bucket(minioProperties.getBucketName())
-                        .object(fileName)
-                        .stream(in, in.available(), -1)
-                        .contentType(file.getContentType())
-                        .build()
-                );
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (in != null) {
-                    try {
-                        in.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-            names.add(fileName);
+            names.add(this.saveFile(file));
         }
         return names;
     }
@@ -117,6 +144,16 @@ public class MinioHandler {
      * @return: org.springframework.http.ResponseEntity<byte [ ]>
      */
     public ResponseEntity<byte[]> download(String fileName) {
+        return this.download(fileName, MediaType.APPLICATION_OCTET_STREAM);
+    }
+
+    /**
+     * description: 下载文件
+     *
+     * @param fileName 文件名
+     * @return: org.springframework.http.ResponseEntity<byte [ ]>
+     */
+    public ResponseEntity<byte[]> download(String fileName, MediaType mediaType) {
         ResponseEntity<byte[]> responseEntity = null;
         InputStream in = null;
         ByteArrayOutputStream out = null;
@@ -124,14 +161,14 @@ public class MinioHandler {
             in = minioClient.getObject(GetObjectArgs.builder().bucket(minioProperties.getBucketName()).object(fileName).build());
             out = new ByteArrayOutputStream();
             IOUtils.copy(in, out);
-            //封装返回值
+            // 封装返回值
             byte[] bytes = out.toByteArray();
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
             headers.setContentLength(bytes.length);
-            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+            headers.setContentType(mediaType);
             headers.setAccessControlExposeHeaders(List.of("*"));
-            responseEntity = new ResponseEntity<byte[]>(bytes, headers, HttpStatus.OK);
+            responseEntity = new ResponseEntity<>(bytes, headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -146,8 +183,7 @@ public class MinioHandler {
                 if (out != null) {
                     out.close();
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException ignored) {
             }
         }
         return responseEntity;
@@ -155,6 +191,7 @@ public class MinioHandler {
 
     /**
      * 查看文件对象
+     *
      * @param bucketName 存储bucket名称
      */
     public void listObjects(String bucketName) {
@@ -173,8 +210,9 @@ public class MinioHandler {
 
     /**
      * 批量删除文件对象
+     *
      * @param bucketName 存储bucket名称
-     * @param objects 对象名称集合
+     * @param objects    对象名称集合
      */
     public Iterable<Result<DeleteError>> removeObjects(String bucketName, List<String> objects) {
         List<DeleteObject> dos = objects.stream().map(DeleteObject::new).collect(Collectors.toList());

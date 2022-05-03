@@ -1,7 +1,7 @@
-package m.links.file.confg;
+package com.springboot.cli.confg;
 
 import lombok.extern.slf4j.Slf4j;
-import m.links.file.utils.ResponseResult;
+import com.springboot.cli.utils.ResponseResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 

@@ -1,4 +1,4 @@
-package m.links.file.utils;
+package com.springboot.cli.utils;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;

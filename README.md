@@ -47,12 +47,13 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
 | 10  | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
 | 11  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
-| 12 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
-| 13 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
-| 14 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
-| 15 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 16 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
-| 17 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
-| 18 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
-| 19 | [springboot-elasticsearch](./springboot-elasticsearch) | es索引引擎 | 完成 | 2022.5.1 | |
+| 12 | [springboot-minio](./springboot-minio) | minio文件服务器 | 完成 | 2022.5.2 |  |
+| 13 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
+| 14 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
+| 15 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 16 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 17 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 |  |
+| 18 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
+| 19 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
+| 20 | [springboot-elasticsearch](./springboot-elasticsearch) | es索引引擎 | 完成 | 2022.5.1 | |
 

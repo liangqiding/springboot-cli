@@ -1,4 +1,4 @@
-package m.links.file.utils;
+package com.springboot.cli.utils;
 
 
 import lombok.Data;
