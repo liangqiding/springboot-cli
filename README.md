@@ -25,7 +25,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 1    | [netty-tcp-client](./netty-tcp-client)             | tcp 客户端              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/yvjS5)     |
 | 2    | [netty-tcp-server](./netty-tcp-server)             | tcp 服务器              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/ti5xA)         |
 | 3    | [netty-protobuf-client](./netty-protobuf-client)   | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/Lneul) |
-| 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/yCpAe) |
+| 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/AOJq8) |
 | 5    | [netty-websocket-client](./netty-websocket-client) | webcocket客户端         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/ANdaj) |
 | 6    | [netty-websocket-server](./netty-websocket-server) | websocket服务器         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/uLfIZ) |
 | 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | mqtt broker 及 client | 完成 | 2022.4.10 | [项目讲解](https://github.com/liangqiding/mind-mqtt) |
@@ -41,7 +41,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 3 | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 |  |
 | 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/h1OtT) |
 | 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
-| 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/HdIP6) |
+| 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
 | 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
 | 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
 | 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
