@@ -23,8 +23,8 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | #    | 目录                             | 说明                    | 状态 | 更新时间  | 文档                                   |
 | ---- | -------------------------------------------------- | ----------------------- | ---- | --------- | -------------------------------------- |
 | 1    | [netty-tcp-client](./netty-tcp-client)             | tcp 客户端              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/yvjS5)     |
-| 2    | [netty-tcp-server](./netty-tcp-server)             | tcp 服务器              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/ti5xA)         |
-| 3    | [netty-protobuf-client](./netty-protobuf-client)   | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/Lneul) |
+| 2    | [netty-tcp-server](./netty-tcp-server)             | tcp 服务器              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/CTrfe) |
+| 3    | [netty-protobuf-client](./netty-protobuf-client)   | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/eMELU) |
 | 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/AOJq8) |
 | 5    | [netty-websocket-client](./netty-websocket-client) | webcocket客户端         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/TQW0Y) |
 | 6    | [netty-websocket-server](./netty-websocket-server) | websocket服务器         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/IkjTA) |
