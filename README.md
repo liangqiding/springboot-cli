@@ -22,7 +22,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 | #    | 目录                             | 说明                    | 状态 | 更新时间  | 文档                                   |
 | ---- | -------------------------------------------------- | ----------------------- | ---- | --------- | -------------------------------------- |
-| 1    | [netty-tcp-client](./netty-tcp-client)             | tcp 客户端              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/yvjS5)     |
+| 1    | [netty-tcp-client](./netty-tcp-client)             | tcp 客户端              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/7bdbs) |
 | 2    | [netty-tcp-server](./netty-tcp-server)             | tcp 服务器              | 完成 | 2022.4.17 | [项目讲解](http://t.csdn.cn/CTrfe) |
 | 3    | [netty-protobuf-client](./netty-protobuf-client)   | tcp protobuf 测试客户端 | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/eMELU) |
 | 4    | [netty-protobuf-server](./netty-protobuf-server)   | tcp protobuf 服务器     | 完成 | 2022.4.18 | [项目讲解](http://t.csdn.cn/AOJq8) |
@@ -36,10 +36,10 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 | #    | 目录                                         | 说明                    | 状态 | 更新时间  | 文档                                   |
 | ---- | ------------------------------------------------------------ | ----------------------- | ---- | --------- | -------------------------------------- |
-| 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/2lJPj) |
-| 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger3 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/vSDcq) |
+| 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/ygotv) |
+| 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger3 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/FWkfY) |
 | 3 | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 |  |
-| 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/h1OtT) |
+| 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
 | 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
 | 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
 | 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
