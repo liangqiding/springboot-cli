@@ -30,7 +30,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 6    | [netty-websocket-server](./netty-websocket-server) | websocket服务器         | 完成 | 2022.4.20 | [项目讲解](http://t.csdn.cn/IkjTA) |
 | 7 | [mind-mqtt](https://github.com/liangqiding/mind-mqtt) | mqtt broker 及 client | 完成 | 2022.4.10 | [项目讲解](https://github.com/liangqiding/mind-mqtt) |
 
-## 常用项目
+## Springboot常用项目
 
 `Springboot常用框架基础模板`
 
@@ -59,3 +59,11 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 
 
+## SpringCloud常用项目
+
+`Springcloud常用框架基础模板`
+
+| #    | 目录                                     | 说明                                             | 状态   | 更新时间 | 文档 |
+| ---- | ---------------------------------------- | ------------------------------------------------ | ------ | -------- | ---- |
+| 1    | [springcloud-nacos](./springcloud-nacos) | 升级2020.0.5版cloud，整合nacos+openfeign调用示例 | 完成   | 2022.5.8 |      |
+| 2    | springcloud-gateway                      | 整合网关服务，实现服务统一拦截，统一转发         | 进行中 |          |      |

@@ -1,0 +1,21 @@
+server:
+  port: 9999
+# NaCos
+spring:
+  application:
+    name: consumer
+# NaCos
+  cloud:
+    service-registry:
+      auto-registration:
+        # 是否注册到注册中心
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 192.168.41.128:8848
+        namespace: 4c016e5c-cacb-44d5-955d-22754ede9fce
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        prefix: ${spring.application.name}
