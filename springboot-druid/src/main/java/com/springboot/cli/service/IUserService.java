@@ -14,4 +14,4 @@ import com.springboot.cli.domain.User;
  */
 public interface IUserService extends IService<User> {
 
-   }
+}

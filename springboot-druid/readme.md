@@ -5,7 +5,11 @@
 
 ## 使用
 - 启动项目
-- druid监控界面地址
-```
+- druid监控界面地址 账号密码 root/123456
+```go
 http://localhost:9999/druid/sql.html
+```
+- 查询接口
+```go
+http://localhost:9999/list
 ```

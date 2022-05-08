@@ -38,9 +38,9 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | ---- | ------------------------------------------------------------ | ----------------------- | ---- | --------- | -------------------------------------- |
 | 1 | [springboot-web](./springboot-web)                           | springboot-基础web项目  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/ygotv) |
 | 2 | [springboot-swagger](./springboot-swagger) | springboot-整合swagger3 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/FWkfY) |
-| 3 | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 |  |
+| 3 | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 | [项目讲解](http://t.csdn.cn/a3Fb0) |
 | 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
-| 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/SFM9r) |
+| 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/ZpDVf) |
 | 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
 | 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
 | 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
@@ -56,4 +56,6 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 18 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 |                                    |
 | 19 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
 | 20 | [springboot-elasticsearch](./springboot-elasticsearch) | es索引引擎 | 完成 | 2022.5.1 | |
+
+
 
