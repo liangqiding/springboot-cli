@@ -42,8 +42,8 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 4 | [springboot-mongodb](./springboot-mongodb) | 整合mongodb，及使用案例 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
 | 5 | [springboot-thymeleaf](./springboot-thymeleaf) | 整合thymeleaf，及使用案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/ZpDVf) |
 | 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/uBLdp) |
-| 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/rMuV3) |
+| 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/yK5Yd) |
+| 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/eFCEX) |
 | 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
 | 10  | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
 | 11  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
