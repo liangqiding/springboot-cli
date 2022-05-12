@@ -44,11 +44,11 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 6 | [springboot-shiro](./springboot-shiro) | shiro安全框架、及登录案例 | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
 | 7   | [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/yK5Yd) |
 | 8 | [springboot-redis](./springboot-redis) | springboot-整合redis | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/eFCEX) |
-| 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/oSwiZ) |
-| 10  | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wmdG5) |
-| 11  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/ZFOYP) |
+| 9   | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/zD0LX) |
+| 10  | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wDGx5) |
+| 11  | [springboot-upload](./springboot-upload)                     | 文件上传下载            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/A0O6X) |
 | 12 | [springboot-minio](./springboot-minio) | minio文件服务器 | 完成 | 2022.5.2 |  |
-| 13 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/Nbn2n) |
+| 13 | [springboot-kafka](./springboot-kafka) | 消息队列kafka提供者及消费者 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
 | 14 | [springboot-rabbitMQ](./springboot-rabbitMQ) | 消息队列rabbitMQ提供者及消费者 | 完成 | 2022.4.27 |  |
 | 15 | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
 | 16 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
@@ -63,7 +63,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 `Springcloud常用框架基础模板`
 
-| #    | 目录                                     | 说明                                             | 状态   | 更新时间 | 文档 |
-| ---- | ---------------------------------------- | ------------------------------------------------ | ------ | -------- | ---- |
-| 1    | [springcloud-nacos](./springcloud-nacos) | 升级2020.0.5版cloud，整合nacos+openfeign调用示例 | 完成   | 2022.5.8 |      |
-| 2    | springcloud-gateway                      | 整合网关服务，实现服务统一拦截，统一转发         | 进行中 |          |      |
+| #    | 目录                                         | 说明                                             | 状态 | 更新时间  | 文档 |
+| ---- | -------------------------------------------- | ------------------------------------------------ | ---- | --------- | ---- |
+| 1    | [springcloud-nacos](./springcloud-nacos)     | 升级2020.0.5版cloud，整合nacos+openfeign调用示例 | 完成 | 2022.5.8  |      |
+| 2    | [springcloud-gateway](./springcloud-gateway) | 整合网关服务，实现服务统一拦截，统一转发         | 完成 | 2022.5.12 |      |

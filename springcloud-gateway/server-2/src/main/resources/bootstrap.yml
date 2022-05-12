@@ -1,0 +1,22 @@
+server:
+  port: 20002
+# NaCos
+spring:
+  application:
+    name: server-2
+  # NaCos
+  cloud:
+    service-registry:
+      auto-registration:
+        # 是否注册到注册中心
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 192.168.0.251:8848
+#        namespace: 4c016e5c-cacb-44d5-955d-22754ede9fce
+        namespace: be88b2b8-987c-4801-a5f1-05b867e6370e
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        prefix: ${spring.application.name}

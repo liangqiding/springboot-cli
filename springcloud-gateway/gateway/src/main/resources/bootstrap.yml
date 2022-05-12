@@ -1,0 +1,50 @@
+server:
+  port: 20000
+# NaCos
+spring:
+  application:
+    name: gateway
+  # NaCos
+  cloud:
+    service-registry:
+      auto-registration:
+        # 是否注册到注册中心
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 192.168.0.251:8848
+        #        namespace: 4c016e5c-cacb-44d5-955d-22754ede9fce
+        namespace: be88b2b8-987c-4801-a5f1-05b867e6370e
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        prefix: ${spring.application.name}
+
+    #  网关
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Vary Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_UNIQUE
+        - DedupeResponseHeader=Access-Control-Allow-Origin, RETAIN_FIRST
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        # 服务1
+        - id: server-1
+          # 服务地址
+          uri: lb://server-1
+          # 拦截的路由
+          predicates:
+            - Path=/server1/**
+          # 转发时去除前缀数量，当为1时:原：/server1/a/b/c  转发后为 /a/b/c
+          filters:
+            - StripPrefix=0
+        # 服务2
+        - id: server-2
+          uri: lb://server-2
+          predicates:
+            - Path=/server2/**
+          filters:
+            - StripPrefix=0
