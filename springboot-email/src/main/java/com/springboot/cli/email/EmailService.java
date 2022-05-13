@@ -37,7 +37,7 @@ public class EmailService {
     }
 
     /**
-     * 发送邮件(带附件)读取模板
+     * 发送邮件(带附件)
      *
      * @param to      目标邮箱
      * @param subject 标题

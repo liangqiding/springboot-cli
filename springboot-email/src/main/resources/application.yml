@@ -1,12 +1,9 @@
 server:
   port: 9999
 
-
-
-
 email:
   host: smtp.qq.com
   from: xx@qq.com
   # 密码自行登录邮箱开启获取，操作很简单
-  pass: gydvhjbghjjfghhhb
+  pass: xxxxxxxxxxxxx
   port: 25
