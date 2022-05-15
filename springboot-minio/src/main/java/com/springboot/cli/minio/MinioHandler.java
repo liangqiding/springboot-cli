@@ -138,6 +138,13 @@ public class MinioHandler {
     }
 
     /**
+     * 获取文件
+     */
+    public InputStream getFile(String fileName) throws Exception {
+        return minioClient.getObject(GetObjectArgs.builder().bucket(minioProperties.getBucketName()).object(fileName).build());
+    }
+
+    /**
      * description: 下载文件
      *
      * @param fileName 文件名
@@ -156,13 +163,10 @@ public class MinioHandler {
     public ResponseEntity<byte[]> download(String fileName, MediaType mediaType) {
         ResponseEntity<byte[]> responseEntity = null;
         InputStream in = null;
-        ByteArrayOutputStream out = null;
         try {
-            in = minioClient.getObject(GetObjectArgs.builder().bucket(minioProperties.getBucketName()).object(fileName).build());
-            out = new ByteArrayOutputStream();
-            IOUtils.copy(in, out);
+            in = this.getFile(fileName);
             // 封装返回值
-            byte[] bytes = out.toByteArray();
+            byte[] bytes = IoUtil.readBytes(in);
             HttpHeaders headers = new HttpHeaders();
             headers.add("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
             headers.setContentLength(bytes.length);
@@ -172,20 +176,17 @@ public class MinioHandler {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (in != null) {
-                    try {
-                        in.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
+            Optional.ofNullable(in).ifPresent(
+                    i -> {
+                        try {
+                            i.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
-                }
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException ignored) {
-            }
+            );
         }
+
         return responseEntity;
     }
 

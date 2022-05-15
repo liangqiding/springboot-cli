@@ -2,6 +2,7 @@ package com.springboot.cli.handler;
 
 
 import com.springboot.cli.exception.MyException;
+import com.springboot.cli.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,11 +23,9 @@ public class ControllerExceptionHandler {
      */
     @ExceptionHandler(MyException.class)
     @ResponseBody
-    public HashMap<String, Object> handleUserNotExistsException(MyException e) {
-        HashMap<String, Object> map = new HashMap<>(2);
-        map.put("code", e.getCode());
-        map.put("message", e.getMessage());
-        return map;
+    public ResponseResult<String> handleUserNotExistsException(MyException e) {
+        log.error("捕获到自定义异常：{}", e.getMessage());
+        return new ResponseResult<>(ResponseResult.RespCode.MY_ERROR.getCode(), e.getMessage());
     }
 
     /**
@@ -34,12 +33,9 @@ public class ControllerExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public HashMap<String, Object> handlerNoFoundException(Exception e) {
+    public ResponseResult<String> handlerNoFoundException(Exception e) {
         log.error(e.getMessage(), e);
-        HashMap<String, Object> map = new HashMap<>(2);
-        map.put("code", 404);
-        map.put("message", "服务器未知异常");
-        return map;
+        return new ResponseResult<>(ResponseResult.RespCode.ERROR);
     }
 
 }

@@ -41,7 +41,6 @@ public class MinioProperties {
      */
     private String bucketName;
 
-
     @Bean
     public MinioClient getMinioClient() throws Exception {
         return MinioClient.builder()

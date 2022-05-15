@@ -21,7 +21,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping("minio")
-public class IndexController {
+public class MinioController {
 
     private final MinioHandler minioHandler;
 
