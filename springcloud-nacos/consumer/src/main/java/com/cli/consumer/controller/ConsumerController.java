@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @RequiredArgsConstructor
-public class IndexController {
+public class ConsumerController {
 
     private final ProviderApi providerApi;
 
-    @GetMapping("/")
+    @GetMapping("/test")
     public String get() {
+        // 从提供者中获取数据
         ResponseEntity<String> stringResponseEntity = providerApi.get();
-        log.info("向提供者获取数据：{}", stringResponseEntity);
+        log.info("从提供者中获取数据：{}", stringResponseEntity);
         return stringResponseEntity.getBody();
     }
 }
