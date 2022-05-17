@@ -13,7 +13,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.util.Date;
@@ -27,11 +26,17 @@ import java.util.Optional;
 @Slf4j
 public class LogAspect {
 
+    /**
+     * 植入触发条件
+     */
     @Pointcut("@annotation(com.springboot.cli.annotation.CustomLog)")
     public void pointcut() {
 
     }
 
+    /**
+     * 环绕增强，相当于MethodInterceptor
+     */
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         SysLog sysLog = this.getMethodInfo(joinPoint);

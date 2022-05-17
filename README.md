@@ -54,7 +54,7 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 | 16 | [springboot-scheduler](./springboot-scheduler) | 定时任务、异步任务 | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
 | 17 | [springboot-email](./springboot-email) | hutool版邮件发送案例 | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
 | 18 | [springboot-exception](./springboot-exception) | web全局异常处理 | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/ehwl3) |
-| 19 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | |
+| 19 | [springboot-aop-logger](./springboot-aop-logger) | AOP日记，注解实现 | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
 | 20 | [springboot-elasticsearch](./springboot-elasticsearch) | es索引引擎 | 完成 | 2022.5.1 | |
 
 
@@ -63,7 +63,11 @@ Springboot-cli开发脚手架，各种常用框架使用案例模板，完善的
 
 `Springcloud常用框架基础模板`
 
-| #    | 目录                                         | 说明                                             | 状态 | 更新时间  | 文档 |
-| ---- | -------------------------------------------- | ------------------------------------------------ | ---- | --------- | ---- |
-| 1    | [springcloud-nacos](./springcloud-nacos)     | 升级2020.0.5版cloud，整合nacos+openfeign调用示例 | 完成 | 2022.5.8  |      |
-| 2    | [springcloud-gateway](./springcloud-gateway) | 整合网关服务，实现服务统一拦截，统一转发         | 完成 | 2022.5.12 |      |
+| #    | 目录                                         | 说明                                             | 状态 | 更新时间  | 文档                               |
+| ---- | -------------------------------------------- | ------------------------------------------------ | ---- | --------- | ---------------------------------- |
+| 1    | [springcloud-nacos](./springcloud-nacos)     | 升级2020.0.5版cloud，整合nacos+openfeign调用示例 | 完成 | 2022.5.8  | [项目讲解](http://t.csdn.cn/2h1xm) |
+| 2    | [springcloud-gateway](./springcloud-gateway) | 整合网关服务，实现服务统一拦截，统一转发         | 完成 | 2022.5.12 |                                    |
+
+SpringBoot-cli 开发脚手架
+
+Springboot开发脚手架，各种常用框架使用案例，完善的文档，致力于让开发者快速搭建基础环境并让应用跑起来。开源项目地址：https://github.com/liangqiding/springboot-cli
