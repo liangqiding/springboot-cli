@@ -93,5 +93,4 @@ class DomeApplicationTests {
         esUserService.deleteUser(1L);
     }
 
-
 }

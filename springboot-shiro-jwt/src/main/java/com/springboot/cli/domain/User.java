@@ -1,8 +1,7 @@
-package com.springboot.cli.entity;
+package com.springboot.cli.domain;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-import java.util.Date;
 
 /**
  * 用户表
@@ -24,18 +23,13 @@ public class User {
     private String username;
 
     /**
-     * 用户别称
-     */
-    private String account;
-
-    /**
      * 密码
      */
     private String password;
 
     /**
-     * 创建日期
+     * 用户别称
      */
-    private Date createdDate;
+    private String name;
 
 }

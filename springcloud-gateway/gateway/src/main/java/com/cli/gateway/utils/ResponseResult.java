@@ -4,8 +4,6 @@ package com.cli.gateway.utils;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-
-
 import java.io.Serializable;
 
 /**
