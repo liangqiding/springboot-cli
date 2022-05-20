@@ -29,28 +29,32 @@ public class ResponseResult<T> implements Serializable {
         this.data = data;
     }
 
-    public static <T> ResponseResult<T> ok(T data) {
-        return build(RespCode.OK.code, RespCode.OK.message, data);
+    private static <T> ResponseResult<T> build(Integer code, String message, T data) {
+        return new ResponseResult<>(code, message, data);
     }
 
-    private static <T> ResponseResult<T> build(Integer code, String message, T data) {
-        return new ResponseResult<>(RespCode.OK.code, message, data);
+    public static <T> ResponseResult<T> ok() {
+        return new ResponseResult<>(RespCode.OK.code, RespCode.OK.message, null);
+    }
+
+    public static <T> ResponseResult<T> ok(T data) {
+        return build(RespCode.OK.code, RespCode.OK.message, data);
     }
 
     private static <T> ResponseResult<T> ok(String message, T data) {
         return build(RespCode.OK.code, message, data);
     }
 
-    public static <T> ResponseResult<T> fail(RespCode respCode, String message) {
-        return build(respCode.getCode(), message, null);
+    public static <T> ResponseResult<T> fail() {
+        return fail(RespCode.ERROR.message);
     }
 
     public static <T> ResponseResult<T> fail(String message) {
         return fail(RespCode.ERROR, message);
     }
 
-    public static <T> ResponseResult<T> fail() {
-        return fail(RespCode.ERROR.message);
+    public static <T> ResponseResult<T> fail(RespCode respCode, String message) {
+        return build(respCode.getCode(), message, null);
     }
 
     public enum RespCode {
