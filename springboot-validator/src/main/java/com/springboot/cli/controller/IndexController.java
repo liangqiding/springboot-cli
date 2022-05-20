@@ -1,7 +1,6 @@
 package com.springboot.cli.controller;
 
 
-import com.springboot.cli.exception.MyException;
 import com.springboot.cli.utils.ResponseResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,25 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
+    /**
+     * 基础web
+     */
     @GetMapping("/")
-    public ResponseResult<String> get() {
-        return ResponseResult.ok("模拟成功获取数据");
+    public ResponseResult<String> hello() {
+        return ResponseResult.ok("hello");
     }
 
-    /**
-     * 自定义异常捕获
-     */
     @GetMapping("/err")
     public ResponseResult<String> error() {
-        throw new MyException("模拟异常", 4004);
-    }
-
-    /**
-     * 其它异常捕获
-     */
-    @GetMapping("/err2")
-    public ResponseResult<String> error2() {
         int i = 1 / 0;
-        return ResponseResult.ok("OK");
+        return ResponseResult.ok("模拟错误");
     }
 }

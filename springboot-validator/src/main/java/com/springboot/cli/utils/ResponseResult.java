@@ -3,7 +3,6 @@ package com.springboot.cli.utils;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 
 /**

@@ -1,4 +1,4 @@
-package com.springboot.cli.config;
+package com.springboot.cli.shiro;
 
 import org.apache.shiro.mgt.DefaultSubjectFactory;
 import org.apache.shiro.subject.Subject;

@@ -1,11 +1,10 @@
-package com.springboot.cli.config;
+package com.springboot.cli.shiro;
 
 import com.alibaba.fastjson.JSON;
-import com.springboot.cli.jwt.JwtToken;
+import com.springboot.cli.shiro.jwt.JwtToken;
 import com.springboot.cli.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.web.filter.AccessControlFilter;
-import org.apache.shiro.web.filter.authc.AuthenticatingFilter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 

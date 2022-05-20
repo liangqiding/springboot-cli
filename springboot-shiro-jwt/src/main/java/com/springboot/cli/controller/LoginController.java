@@ -1,9 +1,11 @@
 package com.springboot.cli.controller;
 
-import com.springboot.cli.jwt.TokenProvider;
+import com.springboot.cli.shiro.jwt.TokenProvider;
 import com.springboot.cli.utils.ResponseResult;
 import com.springboot.cli.utils.ShiroUtils;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -16,6 +18,9 @@ public class LoginController {
     @PostMapping(value = "/login")
     public ResponseResult<String> login(@RequestParam("username") String username,
                                         @RequestParam("password") String password) {
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password);
+        Subject subject = SecurityUtils.getSubject();
+        subject.login(usernamePasswordToken);
         // 校验逻辑自行实现
         if (true) {
             String token = TokenProvider.createToken(10001L);

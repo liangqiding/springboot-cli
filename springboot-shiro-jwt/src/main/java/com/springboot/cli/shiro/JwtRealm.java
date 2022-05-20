@@ -1,7 +1,7 @@
-package com.springboot.cli.config;
+package com.springboot.cli.shiro;
 
-import com.springboot.cli.jwt.JwtToken;
-import com.springboot.cli.jwt.TokenProvider;
+import com.springboot.cli.shiro.jwt.JwtToken;
+import com.springboot.cli.shiro.jwt.TokenProvider;
 import io.jsonwebtoken.Claims;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -11,6 +11,11 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.stereotype.Component;
 
 
+/**
+ * 处理token校验
+ *
+ * @author ding
+ */
 @Component
 public class JwtRealm extends AuthorizingRealm {
 

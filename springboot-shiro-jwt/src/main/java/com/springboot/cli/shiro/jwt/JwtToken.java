@@ -1,4 +1,4 @@
-package com.springboot.cli.jwt;
+package com.springboot.cli.shiro.jwt;
 
 
 import org.apache.shiro.authc.AuthenticationToken;
