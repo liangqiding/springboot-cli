@@ -64,7 +64,7 @@ public class ShiroFilter extends AccessControlFilter {
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         httpResponse.setHeader("Content-Type", "application/json;charset=UTF-8");
-        ResponseResult<String> resp = new ResponseResult<>(ResponseResult.RespCode.UNAUTHORIZED);
+        ResponseResult<String> resp = ResponseResult.fail(ResponseResult.RespCode.UNAUTHORIZED);
         httpResponse.getWriter().write(JSON.toJSONString(resp));
         return false;
     }

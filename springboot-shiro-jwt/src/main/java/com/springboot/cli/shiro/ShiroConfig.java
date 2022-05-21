@@ -71,7 +71,9 @@ public class ShiroConfig {
         // 拦截器
         Map<String, String> filterRuleMap = new LinkedHashMap<>(){
             {
+                // 登录注册放行
                 put("/login", "anon");
+                put("/register", "anon");
                 // swagger放行
                 put("/swagger-ui.html", "anon");
                 put("/swagger-resources", "anon");

@@ -3,6 +3,7 @@ package com.springboot.cli.utils;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+
 import java.io.Serializable;
 
 /**
@@ -41,8 +42,8 @@ public class ResponseResult<T> implements Serializable {
         return build(RespCode.OK.code, RespCode.OK.message, data);
     }
 
-    private static <T> ResponseResult<T> ok(String message, T data) {
-        return build(RespCode.OK.code, message, data);
+    private static <T> ResponseResult<T> ok(String message) {
+        return build(RespCode.OK.code, message, null);
     }
 
     public static <T> ResponseResult<T> fail() {
@@ -53,8 +54,12 @@ public class ResponseResult<T> implements Serializable {
         return fail(RespCode.ERROR, message);
     }
 
+    public static <T> ResponseResult<T> fail(RespCode respCode) {
+        return build(respCode.code, respCode.message, null);
+    }
+
     public static <T> ResponseResult<T> fail(RespCode respCode, String message) {
-        return build(respCode.getCode(), message, null);
+        return build(respCode.code, message, null);
     }
 
     public enum RespCode {

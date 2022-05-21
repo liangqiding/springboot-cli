@@ -3,7 +3,6 @@ package com.springboot.cli.utils;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
 
@@ -24,40 +23,43 @@ public class ResponseResult<T> implements Serializable {
 
     private T data;
 
-    /**
-     * http默认构造
-     */
-    public ResponseResult() {
-        super();
-        this.code = RespCode.OK.code;
-        this.message = RespCode.ERROR.message;
-    }
-
-
-    public ResponseResult(T data) {
-        super();
-        this.code = RespCode.OK.code;
-        this.message = RespCode.OK.message;
-        this.data = data;
-    }
-
-    public ResponseResult(RespCode respCode) {
-        super();
-        this.code = respCode.getCode();
-        this.message = respCode.getMessage();
-    }
-
-    public ResponseResult(Integer code, String message) {
-        super();
-        this.code = code;
-        this.message = message;
-    }
-
     public ResponseResult(Integer code, String message, T data) {
         super();
         this.code = code;
         this.message = message;
         this.data = data;
+    }
+
+    private static <T> ResponseResult<T> build(Integer code, String message, T data) {
+        return new ResponseResult<>(code, message, data);
+    }
+
+    public static <T> ResponseResult<T> ok() {
+        return new ResponseResult<>(RespCode.OK.code, RespCode.OK.message, null);
+    }
+
+    public static <T> ResponseResult<T> ok(T data) {
+        return build(RespCode.OK.code, RespCode.OK.message, data);
+    }
+
+    public static <T> ResponseResult<T> ok(String message) {
+        return build(RespCode.OK.code, message, null);
+    }
+
+    public static <T> ResponseResult<T> fail() {
+        return fail(RespCode.ERROR.message);
+    }
+
+    public static <T> ResponseResult<T> fail(String message) {
+        return fail(RespCode.ERROR, message);
+    }
+
+    public static <T> ResponseResult<T> fail(RespCode respCode) {
+        return fail(respCode, respCode.message);
+    }
+
+    public static <T> ResponseResult<T> fail(RespCode respCode, String message) {
+        return build(respCode.getCode(), message, null);
     }
 
     public enum RespCode {

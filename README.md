@@ -49,11 +49,12 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 | 11   | [springboot-kafka](./springboot-kafka)                       | 消息队列kafka提供者及消费者             | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
 | 12   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者          | 完成 | 2022.4.27 |                                    |
 | 13   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                    | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
 | 14   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                      | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
 | 16   | [springboot-exception](./springboot-exception)               | 统一响应和异常处理                      | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/d65eb) |
 | 17   | [springboot-aop-logger](./springboot-aop-logger)             | AOP日记，注解实现                       | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
 | 18   | [springboot-elasticsearch](./springboot-elasticsearch)       | es索引引擎                              | 完成 | 2022.5.1  | [项目讲解](http://t.csdn.cn/LOmgB) |
-| 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                    | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
+| 19   | [springboot-validator](./springboot-validator)               | validator参数校验及捕捉                 | 完成 | 2022.5.21 | [项目讲解](http://t.csdn.cn/wZ2IW) |
 
 - `安全框架`
 
