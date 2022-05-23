@@ -63,7 +63,7 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 | ---------------------------------------------- | ----------------------------------- | ---- | --------- | ---------------------------------- |
 | [springboot-jwt](./springboot-jwt)             | JWT实现token登录认证                | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
 | [springboot-shiro](./springboot-shiro)         | shiro安全框架、及登录案例           | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| [springboot-shiro-jwt](./springboot-shiro-jwt) | shiro+jwt 实现token认证，前后端分离 | 完成 | 2022.5.19 |                                    |
+| [springboot-shiro-jwt](./springboot-shiro-jwt) | shiro+jwt 实现token认证，前后端分离 | 完成 | 2022.5.19 | [项目讲解](http://t.csdn.cn/53WAF) |
 
 
 

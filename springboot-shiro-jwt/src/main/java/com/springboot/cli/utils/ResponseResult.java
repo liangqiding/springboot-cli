@@ -42,10 +42,6 @@ public class ResponseResult<T> implements Serializable {
         return build(RespCode.OK.code, RespCode.OK.message, data);
     }
 
-    public static <T> ResponseResult<T> ok(String message) {
-        return build(RespCode.OK.code, message, null);
-    }
-
     public static <T> ResponseResult<T> fail() {
         return fail(RespCode.ERROR.message);
     }

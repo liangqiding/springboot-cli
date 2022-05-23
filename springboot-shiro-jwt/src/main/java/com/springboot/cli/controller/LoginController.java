@@ -1,12 +1,12 @@
 package com.springboot.cli.controller;
 
 import com.springboot.cli.domain.User;
-import com.springboot.cli.shiro.jwt.TokenProvider;
+import com.springboot.cli.shiro.jwt.JwtProvider;
 import com.springboot.cli.utils.ResponseResult;
 import com.springboot.cli.utils.ShiroUtils;
+import lombok.RequiredArgsConstructor;
 import org.apache.shiro.SecurityUtils;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Objects;
@@ -16,7 +16,10 @@ import java.util.Objects;
  * @author ding
  */
 @RestController
+@RequiredArgsConstructor
 public class LoginController {
+
+    private final JwtProvider jwtProvider;
 
     /**
      * 模拟一个数据库用户
@@ -45,7 +48,7 @@ public class LoginController {
         }
         // 密码加密校验
         if (ShiroUtils.verifyPassword(password, user.getPassword())) {
-            String token = TokenProvider.createToken(user.getUserId());
+            String token = jwtProvider.createToken(user.getUserId());
             return ResponseResult.ok(token);
         }
         return ResponseResult.fail("账号或密码错误");

@@ -1,8 +1,9 @@
 package com.springboot.cli.shiro;
 
+import com.springboot.cli.shiro.jwt.JwtProvider;
 import com.springboot.cli.shiro.jwt.JwtToken;
-import com.springboot.cli.shiro.jwt.TokenProvider;
 import io.jsonwebtoken.Claims;
+import lombok.RequiredArgsConstructor;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -17,7 +18,10 @@ import org.springframework.stereotype.Component;
  * @author ding
  */
 @Component
+@RequiredArgsConstructor
 public class JwtRealm extends AuthorizingRealm {
+
+    private final JwtProvider jwtProvider;
 
     /**
      * 多重写一个support
@@ -50,7 +54,7 @@ public class JwtRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         String jwt = (String) authenticationToken.getPrincipal();
         // 解码token
-        Claims claims = TokenProvider.decodeToken(jwt);
+        Claims claims = jwtProvider.decodeToken(jwt);
         if (claims == null) {
             throw new IncorrectCredentialsException("Authorization token is invalid");
         }

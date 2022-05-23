@@ -14,7 +14,7 @@ import org.apache.shiro.subject.Subject;
 public class ShiroUtils {
 
     /**
-     * 盐
+     * md5盐
      */
     private static final String SALT = "xx.com";
 

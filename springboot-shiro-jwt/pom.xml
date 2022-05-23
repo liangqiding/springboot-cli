@@ -18,6 +18,7 @@
         <shiro.version>1.9.0</shiro.version>
         <jjwt.version>0.9.1</jjwt.version>
         <fastjson.version>1.2.80</fastjson.version>
+        <hutool-all.version>5.7.22</hutool-all.version>
     </properties>
     <dependencies>
         <dependency>

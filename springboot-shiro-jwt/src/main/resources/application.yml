@@ -1,6 +1,8 @@
 server:
   port: 9999
-  servlet:
-    session:
-      # 让Tomcat只能从COOKIE中获取会话信息，这样，当没有Cookie时，URL也就不会被自动添加上 ;jsessionid=… 了。
-      tracking-modes: COOKIE
+
+jwt:
+  # 密钥
+  secret: xxxxx.xxxx.xxxx
+  # 有效期（秒）
+  expire: 86400
