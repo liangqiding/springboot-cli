@@ -1,0 +1,33 @@
+server:
+  port: 9999
+# NaCos
+spring:
+  application:
+    name: consumer
+  # NaCos
+  cloud:
+    service-registry:
+      auto-registration:
+        # 是否注册到注册中心
+        enabled: true
+    nacos:
+      discovery:
+        server-addr: 192.168.0.251:8848
+        # namespace: 1d5a097c-898e-403e-8935-fdbe2cf854f6
+        namespace: be88b2b8-987c-4801-a5f1-05b867e6370e
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: ${spring.cloud.nacos.discovery.namespace}
+        file-extension: yaml
+        prefix: ${spring.application.name}
+
+feign:
+  # 开启熔断机制
+  circuitbreaker:
+    enabled: true
+  # 设置超时时间
+  httpclient:
+    connection-timeout: 2000
+
+
+
