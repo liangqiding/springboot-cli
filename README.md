@@ -50,23 +50,25 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 | 12   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者          | 完成 | 2022.4.27 |                                    |
 | 13   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
 | 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                    | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
-| 14   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                      | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 16   | [springboot-exception](./springboot-exception)               | 统一响应和异常处理                      | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/d65eb) |
-| 17   | [springboot-aop-logger](./springboot-aop-logger)             | AOP日记，注解实现                       | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
-| 18   | [springboot-elasticsearch](./springboot-elasticsearch)       | es索引引擎                              | 完成 | 2022.5.1  | [项目讲解](http://t.csdn.cn/LOmgB) |
-| 19   | [springboot-validator](./springboot-validator)               | validator参数校验及捕捉                 | 完成 | 2022.5.21 | [项目讲解](http://t.csdn.cn/wZ2IW) |
-| 20   | [springboot-captcha](./springboot-captcha)                   | hutool版Captcha图形验证码登录           | 完成 | 2022.5.22 | [项目讲解](http://t.csdn.cn/R3h8g) |
+| 16   | [springboot-async](./springboot-async)                       | @Async开启异步多线程                    | 完成 | 2022.5.27 | [项目讲解](http://t.csdn.cn/NmbYy) |
+| 17   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                      | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 18   | [springboot-exception](./springboot-exception)               | 统一响应和异常处理                      | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/d65eb) |
+| 19   | [springboot-aop-logger](./springboot-aop-logger)             | AOP日记，注解实现                       | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
+| 20   | [springboot-elasticsearch](./springboot-elasticsearch)       | es索引引擎                              | 完成 | 2022.5.1  | [项目讲解](http://t.csdn.cn/LOmgB) |
+| 21   | [springboot-validator](./springboot-validator)               | validator参数校验及捕捉                 | 完成 | 2022.5.21 | [项目讲解](http://t.csdn.cn/wZ2IW) |
+| 22   | [springboot-captcha](./springboot-captcha)                   | hutool版Captcha图形验证码登录           | 完成 | 2022.5.22 | [项目讲解](http://t.csdn.cn/R3h8g) |
 
 - `安全框架`
 
-| 目录                                           | 说明                                    | 状态   | 更新时间  | 文档                               |
-| ---------------------------------------------- | --------------------------------------- | ------ | --------- | ---------------------------------- |
-| [springboot-jwt](./springboot-jwt)             | JWT实现token登录认证                    | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| [springboot-shiro](./springboot-shiro)         | shiro安全框架、及登录案例               | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| [springboot-shiro-jwt](./springboot-shiro-jwt) | shiro+jwt 实现无状态认证，前后端分离    | 完成   | 2022.5.19 | [项目讲解](http://t.csdn.cn/53WAF) |
-| springboot-security                            | security安全框架、及登录案例            | 进行中 |           |                                    |
-| springboot-security+jwt                        | security+jwt 实现无状态认证，前后端分离 | 进行中 |           |                                    |
-| springboot-security+oauth2                     | security+oauth2 授权服务器              | 进行中 |           |                                    |
+| 目录                                                         | 说明                                    | 状态   | 更新时间  | 文档                               |
+| ------------------------------------------------------------ | --------------------------------------- | ------ | --------- | ---------------------------------- |
+| [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证                    | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
+| [springboot-shiro](./springboot-shiro)                       | shiro安全框架、及登录案例               | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
+| [springboot-shiro-jwt](./springboot-shiro-jwt)               | shiro+jwt 实现无状态认证，前后端分离    | 完成   | 2022.5.19 | [项目讲解](http://t.csdn.cn/53WAF) |
+| [springboot-security](./springboot-security)                 | security安全框架-入门体验版             | 完成   | 2022.5.26 |                                    |
+| [springboot-security-thymeleaf](./springboot-security-thymeleaf) | 自定义账号密码验证+thymeleaf登录案例    | 完成   | 2022.5.27 |                                    |
+| springboot-security+jwt                                      | security+jwt 实现无状态认证，前后端分离 | 进行中 |           |                                    |
+| springboot-security+oauth2                                   | security+oauth2 授权服务器              | 进行中 |           |                                    |
 
 
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页</title>
+</head>
+<body>
+<div>
+    <p th:text="${errorMsg}"></p>
+    <form action="/doLogin" method="post">
+        <h2>登陆页</h2>
+        <h6>账号：admin,密码：123456</h6>
+        <input type="text" id="username"  name="username" placeholder="admin">
+        <input type="password" id="password" name="password"  placeholder="123456">
+        <button type="submit">登陆</button>
+    </form>
+</div>
+</body>
+</html>
