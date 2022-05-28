@@ -42,13 +42,14 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 | 3    | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 | [项目讲解](http://t.csdn.cn/a3Fb0) |
 | 4    | [springboot-mongodb](./springboot-mongodb)                   | 整合mongodb，及使用案例                 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
 | 6    | [springboot-redis](./springboot-redis)                       | springboot-整合redis                    | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/eFCEX) |
-| 7    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例                    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/zD0LX) |
-| 8    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器                  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wDGx5) |
-| 9    | [springboot-upload](./springboot-upload)                     | 文件上传下载                            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/A0O6X) |
-| 10   | [springboot-minio](./springboot-minio)                       | minio文件服务器                         | 完成 | 2022.5.2  | [项目讲解](http://t.csdn.cn/L0SgC) |
-| 11   | [springboot-kafka](./springboot-kafka)                       | 消息队列kafka提供者及消费者             | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
-| 12   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者          | 完成 | 2022.4.27 |                                    |
-| 13   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 7    | [springboot-redisson](./springboot-redisson)                 | redisson分布式缓存、分布式锁            | 完成 | 2022.5.28 | [项目讲解](http://t.csdn.cn/B61ZQ) |
+| 8    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例                    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/zD0LX) |
+| 9    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器                  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wDGx5) |
+| 10   | [springboot-upload](./springboot-upload)                     | 文件上传下载                            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/A0O6X) |
+| 11   | [springboot-minio](./springboot-minio)                       | minio文件服务器                         | 完成 | 2022.5.2  | [项目讲解](http://t.csdn.cn/L0SgC) |
+| 12   | [springboot-kafka](./springboot-kafka)                       | 消息队列kafka提供者及消费者             | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
+| 13   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者          | 完成 | 2022.4.27 |                                    |
+| 14   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
 | 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                    | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
 | 16   | [springboot-async](./springboot-async)                       | @Async开启异步多线程                    | 完成 | 2022.5.27 | [项目讲解](http://t.csdn.cn/NmbYy) |
 | 17   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                      | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |

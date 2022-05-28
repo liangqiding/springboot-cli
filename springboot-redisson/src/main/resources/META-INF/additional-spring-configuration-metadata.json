@@ -1,0 +1,79 @@
+{
+  "properties": [
+    {
+      "name": "mind.mqtt.broker.host",
+      "type": "java.lang.String",
+      "description": "启动地址.",
+      "defaultValue": "localhost"
+    },
+    {
+      "name": "mind.mqtt.broker.port",
+      "type": "java.lang.Integer",
+      "description": "监听端口号.",
+      "defaultValue": 1883
+    },
+    {
+      "name": "mind.mqtt.broker.username",
+      "type": "java.lang.String",
+      "description": "MQTT管理员账号."
+    },
+    {
+      "name": "mind.mqtt.broker.password",
+      "type": "java.lang.String",
+      "description": "MQTT管理员密码."
+    },
+    {
+      "name": "mind.mqtt.broker.id",
+      "type": "java.lang.String",
+      "description": "broker id,表示mqtt服务器的id.",
+      "defaultValue": "mind-mqtt-1"
+    },
+    {
+      "name": "mind.mqtt.broker.keep-alive",
+      "type": "java.lang.Integer",
+      "description": "心跳时间(秒).",
+      "defaultValue": 60
+    },
+    {
+      "name": "mind.mqtt.broker.use-epoll",
+      "type": "java.lang.Boolean",
+      "description": "是否开启Epoll模式,linux上使用EpollEventLoopGroup会有较少的gc有更高级的特性，性能更好.",
+      "defaultValue": false
+    },
+    {
+      "name": "redisson.cluster",
+      "type": "java.lang.String",
+      "description": "是否集群."
+    },
+    {
+      "name": "redisson.address",
+      "type": "java.lang.String",
+      "description": "数组格式，若开启集群模式，最少配置3个节点."
+    },
+    {
+      "name": "redisson.connect-timeout",
+      "type": "java.lang.String",
+      "description": "连接超时时间."
+    },
+    {
+      "name": "redisson.password",
+      "type": "java.lang.String",
+      "description": "密码."
+    },
+    {
+      "name": "redisson.database",
+      "type": "java.lang.String",
+      "description": "数据库序号,只有单机模式下生效."
+    },
+    {
+      "name": "redisson.use-epoll",
+      "type": "java.lang.String",
+      "description": "传输模式 linux上开启会有更高的性能."
+    },
+    {
+      "name": "mind.mqtt.monitor.enable",
+      "type": "java.lang.String",
+      "description": "是否开始健康监控."
+    }
+  ]
+}

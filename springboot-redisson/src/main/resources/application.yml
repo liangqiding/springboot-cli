@@ -1,0 +1,18 @@
+server:
+  port: 9999
+
+# redis 配置
+redisson:
+  # 是否集群
+  cluster: false
+  # 数组格式，参考<yml配置数组>，若开启集群模式，最少配置3个节点 192.168.41.128:6379
+  address:
+    - redis://192.168.41.128:6379
+  # 连接超时时间
+  connect-timeout: 3
+  # 密码
+  password: 123456
+  # redis数据库序号,只有单机模式下生效
+  database: 0
+  # 传输模式 linux上开启会有更高的性能
+  use-epoll: false
