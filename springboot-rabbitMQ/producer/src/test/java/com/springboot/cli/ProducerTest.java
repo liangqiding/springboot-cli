@@ -15,26 +15,26 @@ public class ProducerTest {
 
     @Test
     void sendDirect() {
-        rabbitProducer.sendDirect("直通消息发送测试！");
+        rabbitProducer.sendDirect("直通消息9527！");
     }
 
     @Test
     void sendFanout() {
-        rabbitProducer.sendFanout("分裂消息发送测试！");
+        rabbitProducer.sendFanout("分裂消息6666！");
     }
 
     @Test
     void sendDelay() {
-        rabbitProducer.sendDelay("延迟消息发送测试！", 5000);
+        rabbitProducer.sendDelay("延迟消息9999！", 5000);
     }
 
     @Test
     void sendAndExpire() {
-        rabbitProducer.sendAndExpire("消息发送测试！该消息有效期5秒", 5000);
+        rabbitProducer.sendAndExpire("明天下午2点老地方不见不散！该消息有效期5秒");
     }
 
     @Test
     void sendTopic() {
-        rabbitProducer.sendTopic("通配消息发送测试", "test123.topic.test456");
+        rabbitProducer.sendTopic("有内鬼终止校验", "test123.topic.test456");
     }
 }

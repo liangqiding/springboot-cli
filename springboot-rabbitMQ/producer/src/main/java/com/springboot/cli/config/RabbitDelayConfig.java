@@ -20,13 +20,17 @@ public class RabbitDelayConfig {
     public final static String DELAY_QUEUE = "delay.queue";
 
     /**
-     * 创建CustomExchange 自定义交换机,创建延时交换机
+     * 创建延时交换机
      */
     @Bean
-    public CustomExchange delayExchange() {
-        Map<String, Object> args = new HashMap<>(1);
-        args.put("x-delayed-type", "direct");
-        return new CustomExchange(DELAY_EXCHANGE, "x-delayed-message", true, false, args);
+    public DirectExchange delayExchange() {
+        return ExchangeBuilder
+                .directExchange(DELAY_EXCHANGE)
+                // 开启延时
+                .delayed()
+                // 开启持久化
+                .durable(true)
+                .build();
     }
 
     /**
@@ -42,7 +46,7 @@ public class RabbitDelayConfig {
      */
     @Bean
     public Binding delayBinding() {
-        return BindingBuilder.bind(delayQueue()).to(delayExchange()).with("delay").noargs();
+        return BindingBuilder.bind(delayQueue()).to(delayExchange()).with("delay");
     }
 
 }

@@ -23,8 +23,6 @@ public class RabbitDirectConfig {
 
     public final static String DIRECT_QUEUE = "direct.queue";
 
-    public final static String DIRECT_TTL_QUEUE = "direct.ttl.queue";
-
     /**
      * 创建direct Exchange交换机也叫完全匹配交换机
      */
@@ -41,24 +39,6 @@ public class RabbitDirectConfig {
         return new Queue(DIRECT_QUEUE);
     }
 
-
-    /**
-     * 会过期的队列
-     */
-    @Bean
-    public Queue directTtlQueue() {
-        Map<String, Object> args = new HashMap<>(4);
-        // 过期时间ms
-        args.put("x-message-ttl", 10000);
-        // 最大长度5条，超过进入死信队列
-        args.put("x-max-length", 5);
-        // 指定死信交换机
-        args.put("x-dead-letter-exchange", RabbitDeadConfig.DEAD_EXCHANGE);
-        // fanout 不用配置
-        args.put("x-dead-letter-routing-key", "dead");
-        return new Queue(DIRECT_TTL_QUEUE, true, false, false, args);
-    }
-
     /**
      * 交换机绑定队列
      */
@@ -67,9 +47,5 @@ public class RabbitDirectConfig {
         return BindingBuilder.bind(directQueue()).to(directExchange()).with("direct");
     }
 
-    @Bean
-    public Binding directTtlBinding() {
-        return BindingBuilder.bind(directTtlQueue()).to(directExchange()).with("direct.ttl");
-    }
 
 }
