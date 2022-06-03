@@ -1,5 +1,6 @@
 package com.springboot.cli.config;
 
+import com.springboot.cli.mq.RabbitDefine;
 import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -15,16 +16,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitTopicConfig {
 
-    public final static String TOPIC_EXCHANGE = "topic.exchange";
-    public final static String TOPIC_QUEUE_ONE = "topic.queue.one";
-    public final static String TOPIC_QUEUE_TWO = "topic.queue.two";
-
     /**
      * 创建Topic Exchange交换机也叫模糊匹配交换机
      */
     @Bean
     public TopicExchange topicExchange() {
-        return new TopicExchange(TOPIC_EXCHANGE, true, false);
+        return ExchangeBuilder
+                .topicExchange(RabbitDefine.TOPIC_EXCHANGE)
+                // 开启持久化
+                .durable(true)
+                .build();
     }
 
     /**
@@ -32,7 +33,9 @@ public class RabbitTopicConfig {
      */
     @Bean
     public Queue topicOneQueue() {
-        return new Queue(TOPIC_QUEUE_ONE);
+        return QueueBuilder
+                .durable(RabbitDefine.TOPIC_QUEUE_ONE)
+                .build();
     }
 
     /**
@@ -40,7 +43,9 @@ public class RabbitTopicConfig {
      */
     @Bean
     public Queue topicTwoQueue() {
-        return new Queue(TOPIC_QUEUE_TWO);
+        return QueueBuilder
+                .durable(RabbitDefine.TOPIC_QUEUE_TWO)
+                .build();
     }
 
     /**

@@ -1,30 +1,28 @@
 package com.springboot.cli.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.FanoutExchange;
-import org.springframework.amqp.core.Queue;
+import com.springboot.cli.mq.RabbitDefine;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 消息队列配置
+ * 通配符交换机
  *
  * @author ding
  */
 @Configuration
 public class RabbitFanoutConfig {
 
-    public final static String FANOUT_EXCHANGE = "fanout.exchange";
-
-    public final static String TEST_QUEUE = "fanout.queue";
-
     /**
      * 创建Fanout Exchange交换机也叫通配符交换机
      */
     @Bean
     public FanoutExchange fanoutExchange() {
-        return new FanoutExchange(FANOUT_EXCHANGE, true, false);
+        return ExchangeBuilder
+                .fanoutExchange(RabbitDefine.FANOUT_EXCHANGE)
+                // 开启持久化
+                .durable(true)
+                .build();
     }
 
     /**
@@ -32,7 +30,9 @@ public class RabbitFanoutConfig {
      */
     @Bean
     public Queue fanoutQueue() {
-        return new Queue(TEST_QUEUE);
+        return QueueBuilder
+                .durable(RabbitDefine.FANOUT_QUEUE)
+                .build();
     }
 
     /**

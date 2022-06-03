@@ -1,6 +1,7 @@
 package com.springboot.cli.producer;
 
 import com.springboot.cli.config.*;
+import com.springboot.cli.mq.RabbitDefine;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
@@ -25,7 +26,6 @@ import java.util.UUID;
 @Slf4j
 public class RabbitProducer {
 
-
     private final RabbitTemplate rabbitTemplate;
 
     /**
@@ -34,8 +34,7 @@ public class RabbitProducer {
      * @param message 发送的信息
      */
     public void sendDirect(Object message) {
-        CorrelationData correlationData = this.getCorrelationData();
-        rabbitTemplate.convertAndSend(RabbitDirectConfig.DIRECT_QUEUE, message, correlationData);
+        rabbitTemplate.convertAndSend(RabbitDefine.DIRECT_QUEUE, message, this.getCorrelationData());
     }
 
     /**
@@ -44,7 +43,7 @@ public class RabbitProducer {
      * @param message 发送的信息
      */
     public void sendFanout(Object message) {
-        rabbitTemplate.convertAndSend(RabbitFanoutConfig.FANOUT_EXCHANGE, "", message);
+        rabbitTemplate.convertAndSend(RabbitDefine.FANOUT_EXCHANGE, "", message);
     }
 
 
@@ -55,7 +54,7 @@ public class RabbitProducer {
      * @param routingKey 匹配的队列名
      */
     public void sendTopic(Object message, String routingKey) {
-        rabbitTemplate.convertAndSend(RabbitTopicConfig.TOPIC_EXCHANGE, routingKey, message);
+        rabbitTemplate.convertAndSend(RabbitDefine.TOPIC_EXCHANGE, routingKey, message);
     }
 
 
@@ -66,23 +65,17 @@ public class RabbitProducer {
      * @param delay   延迟时间
      */
     public void sendDelay(String message, int delay) {
-        Message messageBuild = MessageBuilder.withBody(message.getBytes(StandardCharsets.UTF_8))
-                .setDeliveryMode(MessageDeliveryMode.PERSISTENT)
-                .setHeader("x-delay", delay)
-                .build();
-        rabbitTemplate.convertAndSend(RabbitDelayConfig.DELAY_EXCHANGE, RabbitDelayConfig.DELAY_QUEUE, messageBuild, this.getCorrelationData());
+        rabbitTemplate.convertAndSend(RabbitDefine.DELAY_EXCHANGE, "delay", message, msg -> {
+            msg.getMessageProperties().setDelay(delay);
+            return msg;
+        });
     }
 
     /**
-     * 发送消息并设置过期时间
+     * 发送临时消息
      */
-    public void sendAndExpire(String message) {
-        // 设置消息过期时间
-        Message messageBuild = MessageBuilder.withBody(message.getBytes(StandardCharsets.UTF_8))
-                .setDeliveryMode(MessageDeliveryMode.PERSISTENT)
-                .setExpiration("10000")
-                .build();
-        rabbitTemplate.convertAndSend(RabbitTtlDirectConfig.DIRECT_TTL_EXCHANGE, RabbitTtlDirectConfig.DIRECT_TTL_QUEUE, messageBuild, this.getCorrelationData());
+    public void sendAndExpire(Object message) {
+        rabbitTemplate.convertAndSend(RabbitDefine.TTL_QUEUE, message, this.getCorrelationData());
     }
 
     /**

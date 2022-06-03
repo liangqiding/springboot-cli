@@ -24,17 +24,18 @@ public class ProducerTest {
     }
 
     @Test
-    void sendDelay() {
-        rabbitProducer.sendDelay("延迟消息9999！", 5000);
+    void sendAndExpire() {
+        rabbitProducer.sendAndExpire("晚上10点老地方不见不散！该消息有效期10秒");
     }
 
     @Test
-    void sendAndExpire() {
-        rabbitProducer.sendAndExpire("明天下午2点老地方不见不散！该消息有效期5秒");
+    void sendDelay() {
+        rabbitProducer.sendDelay("有内鬼，终止交易~~", 5000);
     }
+
 
     @Test
     void sendTopic() {
-        rabbitProducer.sendTopic("有内鬼终止校验", "test123.topic.test456");
+        rabbitProducer.sendTopic("放学别走!", "test123.topic.test456");
     }
 }

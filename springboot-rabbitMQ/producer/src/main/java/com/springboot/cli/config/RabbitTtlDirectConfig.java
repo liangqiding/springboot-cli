@@ -1,5 +1,6 @@
 package com.springboot.cli.config;
 
+import com.springboot.cli.mq.RabbitDefine;
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,16 +13,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitTtlDirectConfig {
 
-    public final static String DIRECT_TTL_EXCHANGE = "directTtl.exchange";
-
-    public final static String DIRECT_TTL_QUEUE = "direct.ttl.queue";
-
     /**
      * 创建direct Exchange交换机也叫完全匹配交换机
      */
     @Bean
     public DirectExchange directTtlExchange() {
-        return new DirectExchange(DIRECT_TTL_EXCHANGE, true, false);
+        return ExchangeBuilder
+                .directExchange(RabbitDefine.TTL_EXCHANGE)
+                // 开启持久化
+                .durable(true)
+                // 所有消费者都解除订阅此队列，autoDelete=true时，此交换机会自动删除
+                //.autoDelete()
+                .build();
     }
 
     /**
@@ -29,13 +32,23 @@ public class RabbitTtlDirectConfig {
      */
     @Bean
     public Queue directTtlQueue() {
-        // .ttl()设置队列的过期时间为10秒
-        return QueueBuilder.durable(DIRECT_TTL_QUEUE).ttl(10000).build();
+
+        return QueueBuilder.
+                durable(RabbitDefine.TTL_QUEUE)
+                // .ttl()设置队列的过期时间为10秒
+                .ttl(10000)
+                // 配置消息过期后的处理者（死信队列交换机）
+                .deadLetterExchange(RabbitDefine.DEAD_EXCHANGE)
+                // 死信队列路由
+                .deadLetterRoutingKey("dead")
+                // 所有消费者都解除订阅此队列，autoDelete=true时，此交换机会自动删除
+                // .autoDelete()
+                .build();
     }
 
     @Bean
     public Binding directTtlBinding() {
-        return BindingBuilder.bind(directTtlQueue()).to(directTtlExchange()).with("direct.ttl");
+        return BindingBuilder.bind(directTtlQueue()).to(directTtlExchange()).with("test");
     }
 
 }
