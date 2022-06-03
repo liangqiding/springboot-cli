@@ -34,30 +34,30 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 
 - `Springboot常用框架基础模板`
 
-| #    | 目录                                                         | 说明                                    | 状态 | 更新时间  | 文档                               |
-| ---- | ------------------------------------------------------------ | --------------------------------------- | ---- | --------- | ---------------------------------- |
-| 1    | [springboot-web](./springboot-web)                           | springboot-基础web项目                  | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/ygotv) |
-| 2    | [springboot-swagger](./springboot-swagger)                   | springboot-整合swagger3                 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/FWkfY) |
-| 5    | [springboot-thymeleaf](./springboot-thymeleaf)               | 整合thymeleaf，及使用案例               | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/ZpDVf) |
-| 3    | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测 | 完成 | 2022.4.28 | [项目讲解](http://t.csdn.cn/a3Fb0) |
-| 4    | [springboot-mongodb](./springboot-mongodb)                   | 整合mongodb，及使用案例                 | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
-| 6    | [springboot-redis](./springboot-redis)                       | springboot-整合redis                    | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/eFCEX) |
-| 7    | [springboot-redisson](./springboot-redisson)                 | redisson分布式缓存、分布式锁            | 完成 | 2022.5.28 | [项目讲解](http://t.csdn.cn/B61ZQ) |
-| 8    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例                    | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/zD0LX) |
-| 9    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器                  | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wDGx5) |
-| 10   | [springboot-upload](./springboot-upload)                     | 文件上传下载                            | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/A0O6X) |
-| 11   | [springboot-minio](./springboot-minio)                       | minio文件服务器                         | 完成 | 2022.5.2  | [项目讲解](http://t.csdn.cn/L0SgC) |
-| 12   | [springboot-kafka](./springboot-kafka)                       | 消息队列kafka提供者及消费者             | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
-| 13   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者          | 完成 | 2022.4.27 |                                    |
-| 14   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                 | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
-| 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                    | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
-| 16   | [springboot-async](./springboot-async)                       | @Async开启异步多线程                    | 完成 | 2022.5.27 | [项目讲解](http://t.csdn.cn/NmbYy) |
-| 17   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                      | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
-| 18   | [springboot-exception](./springboot-exception)               | 统一响应和异常处理                      | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/d65eb) |
-| 19   | [springboot-aop-logger](./springboot-aop-logger)             | AOP日记，注解实现                       | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
-| 20   | [springboot-elasticsearch](./springboot-elasticsearch)       | es索引引擎                              | 完成 | 2022.5.1  | [项目讲解](http://t.csdn.cn/LOmgB) |
-| 21   | [springboot-validator](./springboot-validator)               | validator参数校验及捕捉                 | 完成 | 2022.5.21 | [项目讲解](http://t.csdn.cn/wZ2IW) |
-| 22   | [springboot-captcha](./springboot-captcha)                   | hutool版Captcha图形验证码登录           | 完成 | 2022.5.22 | [项目讲解](http://t.csdn.cn/R3h8g) |
+| #    | 目录                                                         | 说明                                                 | 状态 | 更新时间  | 文档                               |
+| ---- | ------------------------------------------------------------ | ---------------------------------------------------- | ---- | --------- | ---------------------------------- |
+| 1    | [springboot-web](./springboot-web)                           | springboot-基础web项目                               | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/ygotv) |
+| 2    | [springboot-swagger](./springboot-swagger)                   | springboot-整合swagger3                              | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/FWkfY) |
+| 5    | [springboot-thymeleaf](./springboot-thymeleaf)               | 整合thymeleaf，及使用案例                            | 完成 | 2022.4.25 | [项目讲解](http://t.csdn.cn/ZpDVf) |
+| 3    | [springboot-druid](./springboot-druid)                       | 整合druid连接池，开启sql监控，慢SQL检测              | 完成 | 2022.4.28 | [项目讲解](http://t.csdn.cn/a3Fb0) |
+| 4    | [springboot-mongodb](./springboot-mongodb)                   | 整合mongodb，及使用案例                              | 完成 | 2022.4.23 | [项目讲解](http://t.csdn.cn/5ss39) |
+| 6    | [springboot-redis](./springboot-redis)                       | springboot-整合redis                                 | 完成 | 2022.4.21 | [项目讲解](http://t.csdn.cn/eFCEX) |
+| 7    | [springboot-redisson](./springboot-redisson)                 | redisson分布式缓存、分布式锁                         | 完成 | 2022.5.28 | [项目讲解](http://t.csdn.cn/B61ZQ) |
+| 8    | [springboot-mybatis-plus](./springboot-mybatis-plus)         | mybatis-plus使用示例                                 | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/zD0LX) |
+| 9    | [springboot-mybatis-plus-generator](./springboot-mybatis-plus-generator) | mybatis-plus代码生成器                               | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/wDGx5) |
+| 10   | [springboot-upload](./springboot-upload)                     | 文件上传下载                                         | 完成 | 2022.4.12 | [项目讲解](http://t.csdn.cn/A0O6X) |
+| 11   | [springboot-minio](./springboot-minio)                       | minio文件服务器                                      | 完成 | 2022.5.2  | [项目讲解](http://t.csdn.cn/L0SgC) |
+| 12   | [springboot-kafka](./springboot-kafka)                       | 消息队列kafka提供者及消费者                          | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/NDetj) |
+| 13   | [springboot-rabbitMQ](./springboot-rabbitMQ)                 | 消息队列rabbitMQ提供者及消费者，各种类型队列使用案例 | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/PeGVk) |
+| 14   | [springboot-excel-export](./springboot-excel-export)         | Excel、word文档生成导出                              | 完成 | 2022.4.19 | [项目讲解](http://t.csdn.cn/sEv6E) |
+| 15   | [springboot-email](./springboot-email)                       | hutool版邮件发送案例                                 | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/emPuj) |
+| 16   | [springboot-async](./springboot-async)                       | @Async开启异步多线程                                 | 完成 | 2022.5.27 | [项目讲解](http://t.csdn.cn/NmbYy) |
+| 17   | [springboot-scheduler](./springboot-scheduler)               | 定时任务、异步任务                                   | 完成 | 2022.4.24 | [项目讲解](http://t.csdn.cn/12LeI) |
+| 18   | [springboot-exception](./springboot-exception)               | 统一响应和异常处理                                   | 完成 | 2022.4.26 | [项目讲解](http://t.csdn.cn/d65eb) |
+| 19   | [springboot-aop-logger](./springboot-aop-logger)             | AOP日记，注解实现                                    | 完成 | 2022.4.27 | [项目讲解](http://t.csdn.cn/tqXbk) |
+| 20   | [springboot-elasticsearch](./springboot-elasticsearch)       | es索引引擎                                           | 完成 | 2022.5.1  | [项目讲解](http://t.csdn.cn/LOmgB) |
+| 21   | [springboot-validator](./springboot-validator)               | validator参数校验及捕捉                              | 完成 | 2022.5.21 | [项目讲解](http://t.csdn.cn/wZ2IW) |
+| 22   | [springboot-captcha](./springboot-captcha)                   | hutool版Captcha图形验证码登录                        | 完成 | 2022.5.22 | [项目讲解](http://t.csdn.cn/R3h8g) |
 
 - `安全框架`
 
