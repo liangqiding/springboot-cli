@@ -61,15 +61,15 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 
 - `安全框架`
 
-| 目录                                                         | 说明                                    | 状态   | 更新时间  | 文档                               |
-| ------------------------------------------------------------ | --------------------------------------- | ------ | --------- | ---------------------------------- |
-| [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证                    | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| [springboot-shiro](./springboot-shiro)                       | shiro安全框架、及登录案例               | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
-| [springboot-shiro-jwt](./springboot-shiro-jwt)               | shiro+jwt 实现无状态认证，前后端分离    | 完成   | 2022.5.19 | [项目讲解](http://t.csdn.cn/53WAF) |
-| [springboot-security](./springboot-security)                 | security安全框架-入门体验版             | 完成   | 2022.5.26 |                                    |
-| [springboot-security-thymeleaf](./springboot-security-thymeleaf) | 自定义账号密码验证+thymeleaf登录案例    | 完成   | 2022.5.27 |                                    |
-| springboot-security+jwt                                      | security+jwt 实现无状态认证，前后端分离 | 进行中 |           |                                    |
-| springboot-security+oauth2                                   | security+oauth2 授权服务器              | 进行中 |           |                                    |
+| 目录                                                         | 说明                                                    | 状态   | 更新时间  | 文档                               |
+| ------------------------------------------------------------ | ------------------------------------------------------- | ------ | --------- | ---------------------------------- |
+| [springboot-jwt](./springboot-jwt)                           | JWT实现token登录认证                                    | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
+| [springboot-shiro](./springboot-shiro)                       | shiro安全框架、及登录案例（附带网页案例）               | 完成   | 2022.4.25 | [项目讲解](http://t.csdn.cn/INUbc) |
+| [springboot-shiro-jwt](./springboot-shiro-jwt)               | shiro+jwt 实现无状态认证，前后端分离                    | 完成   | 2022.5.19 | [项目讲解](http://t.csdn.cn/53WAF) |
+| [springboot-security](./springboot-security)                 | security安全框架-入门体验版                             | 完成   | 2022.5.26 |                                    |
+| [springboot-security-thymeleaf](./springboot-security-thymeleaf) | 自定义账号密码验证+thymeleaf登录案例（附带网页案例）    | 完成   | 2022.5.27 |                                    |
+| [springboot-security-jwt](./springboot-security-jwt)         | security+jwt 实现无状态认证，前后端分离（附带网页案例） | 完成   | 2022.6.8  |                                    |
+| springboot-security+oauth2                                   | security+oauth2 授权服务器                              | 进行中 |           |                                    |
 
 
 
