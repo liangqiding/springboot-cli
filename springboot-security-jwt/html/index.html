@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http测试页面</title>
+</head>
+<body>
+<div class="login-body">
+    <h4 style="text-align: center">登录</h4>
+    <div class="fromData">
+        <label for="loginUrl">后台：</label><input class="card" id="loginUrl" placeholder="登录地址"
+                                                value="http://localhost:9999"/>
+        <br/>
+        <label for="username">账号：</label><input class="card" id="username" type="text" value="">
+        <br/>
+        <label for="password">密码：</label><input class="card" id="password" type="text" value="">
+        <br/>
+        <button id="login" class="login-btn">登录</button>
+        <br>
+        <h6 id="msg" class="message"></h6>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    $("#url").val(localStorage.getItem("url"))
+    $("#login").click(function () {
+        const url = $("#loginUrl").val()
+        const username = $("#username").val()
+        const password = $("#password").val()
+        const formData = new FormData()
+        localStorage.setItem("url", url)
+        formData.append("username", username)
+        formData.append("password", password)
+        $.ajax({
+            url: url + '/login',
+            type: "post",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if (data.code === 20000) {
+                    alert("登录成功！")
+                    window.location.href = "./info.html";
+                    localStorage.setItem("token", data.data)
+                } else {
+                    alert("登录失败")
+                    $("#msg").html(data.message)
+                }
+            },
+            error: (err) => {
+                $("#msg").val(JSON.stringify(err))
+            }
+        })
+    })
+
+
+</script>
+<style lang="css">
+    .login-body {
+        position: absolute;
+        top: 200px;
+        left: calc(50% - 200px);
+        display: grid;
+        justify-content: center;
+        border: 4px dashed  #04a5f1;
+        width: 400px;
+        height: 400px;
+    }
+
+    .card {
+        width: 200px;
+        margin: 20px 20px 20px 20px;
+    }
+
+    .login-btn {
+        width: 100px;
+        height: 30px;
+        background-color: #46b8e5;
+        margin-left: 100px
+    }
+
+    .message {
+        color: red;
+        text-align: center;
+        margin-top: 10px
+    }
+</style>
+</html>

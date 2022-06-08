@@ -1,0 +1,18 @@
+server:
+  port: 9999
+
+spring:
+  thymeleaf:
+    # 关闭页面缓存，便于开发环境测试
+    cache: false
+    # 静态资源路径
+    prefix: classpath:/templates/
+    # 网页资源默认.html结尾
+    mode: HTML
+
+
+jwt:
+  # 密钥
+  secret: xxxxx.xxxx.xxxx
+  # 有效期（秒）
+  expire: 86400

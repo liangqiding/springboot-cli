@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="info-body">
+    <h4 style="text-align: center">用户数据</h4>
+    <div>
+        用户：<span id="userId"></span>
+    </div>
+    <div>
+        权限：<span id="auths"></span>
+    </div>
+    <div>
+        模拟get请求：<input id="route" placeholder="路径" value="/test"/>
+        <button id="submit">发送</button>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+    const url = localStorage.getItem("url")
+    const token = localStorage.getItem("token")
+    console.log("服务器地址：", url)
+    console.log("token：", token)
+    info()
+
+    function info() {
+        $.ajax({
+            url: url + '/info',
+            type: "get",
+            headers: {
+                token: token
+            },
+            success: function (resp) {
+                console.log(resp)
+                if (resp.code === 20000) {
+                    $("#userId").html(resp.data.userId)
+                    $("#auths").html(resp.data.auths)
+                } else {
+                    alert(data.message)
+                }
+            },
+            error: (err) => {
+                $("#msg").val(JSON.stringify(err))
+            }
+        })
+    }
+
+    $("#submit").click(function () {
+        const route = $("#route").val()
+        $.ajax({
+            url: url + route,
+            type: "get",
+            headers: {
+                token: token
+            },
+            success: function (resp) {
+                console.log(resp)
+                if (resp.code === 20000) {
+                    alert(resp.message)
+                } else {
+                    alert(resp.message)
+                }
+            },
+            error: (err) => {
+                alert(JSON.stringify(err))
+            }
+        })
+    })
+
+</script>
+<style>
+    .info-body {
+        position: absolute;
+        top: 200px;
+        left: calc(50% - 200px);
+        display: grid;
+        grid-template-rows: repeat(4, 60px);
+        justify-content: center;
+        align-content: center;
+        border: 4px dashed #04a5f1;
+        width: 400px;
+        height: 400px;
+    }
+</style>
+</html>
