@@ -23,7 +23,7 @@ public class LogoutSuccess extends SimpleUrlLogoutSuccessHandler {
 
     @Override
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
-        System.out.println("注销成功!");
+        log.info("注销成功!");
         //这里写你登录成功后的逻辑
         response.setStatus(HttpStatus.OK.value());
         response.setContentType("application/json;charset=UTF-8");

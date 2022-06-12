@@ -1,10 +1,9 @@
 package com.springboot.cli.security;
 
-import lombok.Data;
+
 import lombok.experimental.Accessors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-
 import java.util.Collection;
 
 /**

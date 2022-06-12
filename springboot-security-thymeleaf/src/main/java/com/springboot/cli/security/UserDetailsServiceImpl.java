@@ -4,15 +4,13 @@ import com.springboot.cli.domain.MyUser;
 import com.springboot.cli.utils.SecurityUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.access.expression.SecurityExpressionRoot;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -40,7 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             put("admin", new MyUser()
                     .setUserId(1L)
                     .setUsername("admin")
-                    .setPassword(SecurityUtils.passwordEncoder("123456"))
+                    .setPassword(new BCryptPasswordEncoder().encode("123456"))
             );
         }
     };
@@ -53,13 +51,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("not found");
         }
-        // 定义权限列表.
-        List<GrantedAuthority> authorities = new ArrayList<>();
-        // 用户可以访问的资源名称（或者说用户所拥有的权限） 注意：必须"ROLE_"开头
-        authorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        // 角色和权限都在这里添加，角色以ROLE_前缀，不是ROLE_前缀的视为权限,这里添加了ROLE_ADMIN角色和read、write权限
+        List<GrantedAuthority> authorities = AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_ADMIN,read,write");
         AuthUser authUser = new AuthUser(user.getUsername(), user.getPassword(), authorities);
         // 我们存放我们自定义的信息,如用户id,方便后续获取用户信息
         authUser.setUserId(user.getUserId());
         return authUser;
     }
+
 }
