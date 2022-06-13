@@ -65,7 +65,7 @@ Springboot、SpringCloud各种常用框架使用案例，完善的文档，致�
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------ | --------- | ---------------------------------- |
 | [springboot-security](./springboot-security)                 | security安全框架-入门体验版                                  | 完成   | 2022.5.26 | [项目讲解](http://t.csdn.cn/RMupO) |
 | [springboot-security-thymeleaf](./springboot-security-thymeleaf) | security自定义账号密码验证+thymeleaf登录案例（附带网页案例） | 完成   | 2022.5.27 | [项目讲解](http://t.csdn.cn/N8qhS) |
-| [springboot-security-captcha](./springboot-security-captcha) | security+验证码登录案例（附带网页案例）                      | 完成   | 2022.6.13 |                                    |
+| [springboot-security-captcha](./springboot-security-captcha) | security+验证码登录案例（附带网页案例）                      | 完成   | 2022.6.13 | [项目讲解](http://t.csdn.cn/6unAz) |
 | [springboot-security-jwt](./springboot-security-jwt)         | security+jwt 实现无状态认证，前后端分离（附带网页案例）      | 完成   | 2022.6.8  |                                    |
 | springboot-security-sms                                      | security+sms实现短信认证登录，前后端分离（附带网页案例）     | 进行中 |           |                                    |
 | springboot-security+oauth2                                   | security+oauth2 授权服务器                                   | 进行中 |           |                                    |
