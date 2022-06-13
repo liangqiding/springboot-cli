@@ -5,7 +5,6 @@ import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.LineCaptcha;
 import cn.hutool.captcha.ShearCaptcha;
 import cn.hutool.captcha.generator.MathGenerator;
-
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
