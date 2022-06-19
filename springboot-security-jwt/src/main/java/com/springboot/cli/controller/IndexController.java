@@ -73,5 +73,4 @@ public class IndexController {
         return ResponseResult.ok();
     }
 
-
 }

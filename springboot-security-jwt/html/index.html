@@ -40,7 +40,7 @@
             contentType: false,
             success: function (data) {
                 if (data.code === 20000) {
-                    alert("登录成功！")
+                    console.log("登录成功")
                     window.location.href = "./info.html";
                     localStorage.setItem("token", data.data)
                 } else {
@@ -53,8 +53,6 @@
             }
         })
     })
-
-
 </script>
 <style lang="css">
     .login-body {

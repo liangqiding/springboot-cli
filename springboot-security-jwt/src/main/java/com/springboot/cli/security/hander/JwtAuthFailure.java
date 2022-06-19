@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * token 认证失败，toke不存在或已失效
+ * token认证失败，toke不存在或已失效
  *
  * @author ding
  */

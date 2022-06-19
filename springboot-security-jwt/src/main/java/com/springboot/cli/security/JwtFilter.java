@@ -18,9 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-
 /**
- * jwt 过滤器
+ * jwt过滤器
  *
  * @author ding
  */
